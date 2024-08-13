@@ -57,6 +57,7 @@ html {
     color: #333;
     transition: border-color 0.3s, box-shadow 0.3s;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 /* Estiliza a caixa de texto em foco */
 .login-box textarea:focus {
