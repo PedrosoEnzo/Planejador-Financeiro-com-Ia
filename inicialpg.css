@@ -1,6 +1,57 @@
-body{
-    background-color: darkblue;
+/* Define estilos para os elementos <body> e <html> para garantir que a página use toda a altura disponível */
+body,
+html {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove padding padrão */
+    height: 100%; /* Faz com que o body e html ocupem toda a altura da janela */
+    overflow: hidden; /* Remove barras de rolagem */
 }
-a{
-color: white;
+
+/* Estiliza o contêiner da imagem de fundo */
+.background-container {
+    position: relative; /* Permite o posicionamento absoluto dos filhos */
+    height: 100vh; /* Define a altura como 100% da altura da janela */
+}
+
+/* Estiliza a imagem de fundo */
+.background-image {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+        url('img1.jpg'); /* Define a imagem de fundo com gradiente */
+    background-size: cover; /* Faz com que a imagem cubra o contêiner */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-attachment: fixed; /* Faz com que a imagem de fundo fique fixa */
+    height: 100%; /* Ocupa toda a altura do contêiner pai */
+    width: 100%; /* Ocupa toda a largura do contêiner pai */
+    position: absolute; /* Posiciona a imagem atrás dos outros elementos */
+    top: 0; /* Alinha a imagem ao topo do contêiner */
+    left: 0; /* Alinha a imagem à esquerda do contêiner */
+    z-index: -1; /* Garante que a imagem fique atrás do texto */
+}
+
+/* Estiliza o contêiner do texto */
+.text-container {
+    position: relative; /* Permite posicionamento do texto dentro do contêiner */
+    height: 100%; /* Ocupa toda a altura do contêiner pai */
+    display: flex; /* Usa Flexbox para alinhamento */
+    align-items: flex-start; /* Alinha o texto no topo do contêiner */
+    justify-content: flex-end; /* Alinha o texto à direita do contêiner */
+    padding: 20px; /* Adiciona espaço interno ao contêiner */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+}
+
+.link-login {
+    text-align: right; /* Alinha o texto do link à direita dentro do contêiner */
+}
+
+a {
+    color: aliceblue; /* Define a cor do texto do link */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    font-size: 1.2em; /* Ajusta o tamanho da fonte */
+}
+
+a:hover {
+    color: rgb(29, 25, 117); /* Altera a cor do link quando o mouse passa sobre ele */
+    text-decoration: underline; /* Adiciona um sublinhado quando o link é hover */
 }
