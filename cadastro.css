@@ -23,7 +23,7 @@ html {
 
 /* Estiliza a caixa de login */
 .login-box {
-    background: rgba(255, 255, 255, 0.068);
+    background: rgba(20, 23, 189, 0.068);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.219);
     backdrop-filter: blur(11px);
     -webkit-backdrop-filter: blur(11px);
@@ -59,12 +59,7 @@ html {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* Estiliza a caixa de texto em foco */
-.login-box textarea:focus {
-    border-color: #b724be;
-    box-shadow: 0 0 5px rgba(183, 36, 190, 0.5);
-    outline: none;
-}
+
 
 /* Estiliza o botão dentro da caixa de login */
 .login-box button {

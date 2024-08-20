@@ -53,8 +53,8 @@ a {
 }
 
 a:hover {
-    color: rgb(29, 25, 117); /* Altera a cor do link quando o mouse passa sobre ele */
-    text-decoration: underline; /* Adiciona um sublinhado quando o link é hover */
+    color: rgb(35, 18, 189); /* Altera a cor do link quando o mouse passa sobre ele */
+    text-decoration: none; /* Adiciona um sublinhado quando o link é hover */
 }
 
 /* Estiliza a logo */
