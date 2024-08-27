@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Suporte</title>
+    <link rel="stylesheet" href="suporte.css">
+</head>
+<body>
+    <header>
+        <h1>Suporte ao Cliente</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Bem-vindo ao Suporte</h2>
+        <p>Estamos aqui para ajudar! Se você tiver alguma dúvida, consulte nossa FAQ ou entre em contato conosco.</p>
+    </section>
+
+    <section id="faq">
+        <h2>Perguntas Frequentes</h2>
+        <div class="faq-item">
+            <h3>Como faço para resetar minha senha?</h3>
+            <p>Para resetar sua senha, clique em "Esqueci minha senha" na tela de login e siga as instruções.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Como posso entrar em contato com o suporte?</h3>
+            <p>Você pode nos contatar através do formulário na seção de contato abaixo.</p>
+        </div>
+        <!-- Adicione mais perguntas aqui -->
+    </section>
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <form action="#" method="post">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Suporte ao Cliente. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
