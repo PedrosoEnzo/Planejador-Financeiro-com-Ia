@@ -78,16 +78,16 @@ html {
 
 /* Estiliza o botão em hover */
 .login-box button:hover {
-    background-color: #18146c;
+    background-color: #171a72;
 }
 
 /* Estiliza o link de cadastro */
-.cadastro {
+.criarconta {
     margin-top: 10px;
     text-align: center;
 }
 
-.cadastro a {
+.criarconta a {
     text-decoration: none;
     /* Remove o sublinhado */
     color: #ffffff;
@@ -101,7 +101,7 @@ html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.cadastro a:hover {
-    color: #171a71;
+.criarconta a:hover {
+    color: #23157e;
     /* Cor do link ao passar o mouse */
-} 
+}

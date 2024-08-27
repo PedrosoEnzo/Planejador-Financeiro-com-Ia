@@ -84,12 +84,12 @@ html {
 }
 
 /* Estiliza o link de cadastro */
-.cadastro {
+.criarconta {
     margin-top: 10px;
     text-align: center;
 }
 
-.cadastro a {
+.criarconta a {
     text-decoration: none;
     /* Remove o sublinhado */
     color: #ffffff;
@@ -103,7 +103,7 @@ html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.cadastro a:hover {
+.criarconta a:hover {
     color: #141976;
     /* Cor do link ao passar o mouse */
 }

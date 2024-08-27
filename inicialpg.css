@@ -33,11 +33,11 @@ html {
 /* Estiliza o contêiner do texto */
 .text-container {
     position: absolute; /* Permite posicionar o contêiner com precisão */
-    top: 20px; /* Alinha o texto ao topo da tela */
-    left: 20px; /* Margem à esquerda do contêiner */
-    right: 20px; /* Margem à direita do contêiner */
+    top: 100px; /* Ajuste a posição para baixo para deixar espaço para a logo */
+    left: 0; /* Margem à esquerda do contêiner */
+    right: 0; /* Margem à direita do contêiner */
     display: flex; /* Usa Flexbox para alinhamento */
-    justify-content: right; /* Distribui os links para os extremos opostos */
+    justify-content: center; /* Centraliza os links horizontalmente */
     align-items: center; /* Alinha os links verticalmente ao centro */
     gap: 30px; /* Espaço entre os links */
     padding: 10px; /* Adiciona espaço interno ao contêiner */
@@ -54,14 +54,25 @@ a {
 
 a:hover {
     color: rgb(35, 18, 189); /* Altera a cor do link quando o mouse passa sobre ele */
-    text-decoration: none; /* Adiciona um sublinhado quando o link é hover */
+    text-decoration: underline; /* Adiciona um sublinhado quando o link é hover */
 }
 
 /* Estiliza a logo */
-.logo img {
+.logo {
     position: absolute; /* Permite posicionar a logo em qualquer lugar da página */
-    top: 20px; /* Ajusta a posição no topo da página; ajuste conforme necessário */
-    left: 20px; /* Ajusta a posição à esquerda da página; ajuste conforme necessário */
+    top: 10px; /* Ajusta a posição no topo da página; ajuste conforme necessário */
+    left: 50%; /* Centraliza a logo horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição horizontal para centralizar a logo */
+    z-index: 1; /* Garante que a logo fique acima dos outros elementos */
+    display: flex; /* Usa Flexbox para centralizar a logo se necessário */
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
     width: 170px; /* Define a largura da logo; ajuste para o tamanho desejado */
     height: auto; /* Mantém a proporção da logo; ajuste a altura automaticamente */
+  
+   
+   
 }
