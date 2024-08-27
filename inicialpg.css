@@ -43,6 +43,7 @@ html {
     padding: 25px; /* Adiciona espaço interno ao contêiner */
     box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
     z-index: 2;
+
 }
 
 /* Estiliza os links */
@@ -50,12 +51,13 @@ a {
     color: aliceblue; /* Define a cor do texto do link */
     text-decoration: none; /* Remove o sublinhado padrão dos links */
     font-size: 13px; /* Ajusta o tamanho da fonte */
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 a:hover {
     color: rgb(35, 18, 189); /* Altera a cor do link quando o mouse passa sobre ele */
     text-decoration: none; /* Adiciona um sublinhado quando o link é hover */
+    font-weight: bold;
 }
 
 /* Estiliza a logo */
