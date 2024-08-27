@@ -16,7 +16,7 @@ html {
 /* Estiliza a imagem de fundo */
 .background-image {
     background-image:
-        linear-gradient(rgba(0, 0, 0, 3), rgba(0, 0, 0, 0.3)),
+        linear-gradient(rgba(0, 0, 0, 5), rgba(0, 0, 0, 0.3)),
         url('img1.jpg'); /* Define a imagem de fundo com gradiente */
     background-size: cover; /* Faz com que a imagem cubra o contêiner */
     background-position: center; /* Centraliza a imagem */
@@ -39,7 +39,7 @@ html {
     display: flex; /* Usa Flexbox para alinhamento */
     justify-content: center; /* Centraliza os links horizontalmente */
     align-items: center; /* Alinha os links verticalmente ao centro */
-    gap: 30px; /* Espaço entre os links */
+    gap: 40px; /* Espaço entre os links */
     padding: 25px; /* Adiciona espaço interno ao contêiner */
     box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
     z-index: 2;
@@ -61,7 +61,7 @@ a:hover {
 /* Estiliza a logo */
 .logo {
     position: absolute; /* Permite posicionar a logo em qualquer lugar da página */
-    top: -35px; /* Ajusta a posição no topo da página; ajuste conforme necessário */
+    top: -40px; /* Ajusta a posição no topo da página; ajuste conforme necessário */
     left: 50%; /* Centraliza a logo horizontalmente */
     transform: translateX(-50%); /* Ajusta a posição horizontal para centralizar a logo */
     z-index: 0; /* Garante que a logo fique acima dos outros elementos */
@@ -71,7 +71,7 @@ a:hover {
 }
 
 .logo img {
-    width: 250px; /* Define a largura da logo; ajuste para o tamanho desejado */
+    width: 255px; /* Define a largura da logo; ajuste para o tamanho desejado */
     height: auto; /* Mantém a proporção da logo; ajuste a altura automaticamente */
 
 }
