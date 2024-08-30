@@ -57,7 +57,11 @@ a {
 a:hover {
     color: rgb(35, 18, 189); /* Altera a cor do link quando o mouse passa sobre ele */
     text-decoration: none; /* Adiciona um sublinhado quando o link é hover */
+<<<<<<< HEAD
     
+=======
+    font-weight: bold;
+>>>>>>> c586e3781d39c889e2292a3f8f9e59fcf974e0ba
 }
 
 /* Estiliza a logo */
@@ -76,4 +80,8 @@ a:hover {
     width: 255px; /* Define a largura da logo; ajuste para o tamanho desejado */
     height: auto; /* Mantém a proporção da logo; ajuste a altura automaticamente */
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c586e3781d39c889e2292a3f8f9e59fcf974e0ba
