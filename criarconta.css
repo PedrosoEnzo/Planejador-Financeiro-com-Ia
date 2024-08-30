@@ -4,7 +4,6 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
-    
 }
 
 /* Estiliza o <div> com a classe 'background-image' */
@@ -20,14 +19,12 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-   
-    
 }
 
 /* Estiliza a caixa de login */
 .login-box {
-    background: rgba(11, 18, 59, 0.068);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.333);
+    background: rgba(20, 23, 189, 0.068);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.219);
     backdrop-filter: blur(11px);
     -webkit-backdrop-filter: blur(11px);
     border-radius: 10px;
@@ -63,6 +60,7 @@ html {
 }
 
 
+
 /* Estiliza o botão dentro da caixa de login */
 .login-box button {
     width: 100%;
@@ -80,7 +78,7 @@ html {
 
 /* Estiliza o botão em hover */
 .login-box button:hover {
-    background-color: #110f4e;
+    background-color: #171a72;
 }
 
 /* Estiliza o link de cadastro */
@@ -104,6 +102,6 @@ html {
 }
 
 .criarconta a:hover {
-    color: #171d8a;
+    color: #23157e;
     /* Cor do link ao passar o mouse */
 }
