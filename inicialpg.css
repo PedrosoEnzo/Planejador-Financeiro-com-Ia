@@ -23,21 +23,32 @@ html {
 .background-image {
     background-image:
 
-        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
-        url('img1.jpg'); /* Define a imagem de fundo com gradiente */
-    background-size: cover; /* Faz com que a imagem cubra o contêiner */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita repetição da imagem */
-    background-attachment: fixed; /* Faz com que a imagem de fundo fique fixa */
-    height: 100%; /* Ocupa toda a altura do contêiner pai */
-    width: 100%; /* Ocupa toda a largura do contêiner pai */
-    position: absolute; /* Posiciona a imagem atrás dos outros elementos */
-    top: 0; /* Alinha a imagem ao topo do contêiner */
-    left: 0; /* Alinha a imagem à esquerda do contêiner */
-    z-index: -1; /* Garante que a imagem fique atrás do texto */
-
-        linear-gradient(rgba(0, 0, 0, 5), rgba(0, 0, 0, 0.3)),
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
         url('img1.jpg');
+    /* Define a imagem de fundo com gradiente */
+    background-size: cover;
+    /* Faz com que a imagem cubra o contêiner */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Evita repetição da imagem */
+    background-attachment: fixed;
+    /* Faz com que a imagem de fundo fique fixa */
+    height: 100%;
+    /* Ocupa toda a altura do contêiner pai */
+    width: 100%;
+    /* Ocupa toda a largura do contêiner pai */
+    position: absolute;
+    /* Posiciona a imagem atrás dos outros elementos */
+    top: 0;
+    /* Alinha a imagem ao topo do contêiner */
+    left: 0;
+    /* Alinha a imagem à esquerda do contêiner */
+    z-index: -1;
+    /* Garante que a imagem fique atrás do texto */
+
+    linear-gradient(rgba(0, 0, 0, 5), rgba(0, 0, 0, 0.3)),
+    url('img1.jpg');
     /* Define a imagem de fundo com gradiente */
     background-size: cover;
     /* Faz com que a imagem cubra o contêiner */
@@ -65,19 +76,9 @@ html {
 /* Estiliza o contêiner do texto */
 .text-container {
 
-    position: absolute; /* Permite posicionar o contêiner com precisão */
-    top: 65px; /* Ajuste a posição para baixo para deixar espaço para a logo */
-    left: 0; /* Margem à esquerda do contêiner */
-    right: 0; /* Margem à direita do contêiner */
-    display: flex; /* Usa Flexbox para alinhamento */
-    justify-content: center; /* Centraliza os links horizontalmente */
-    align-items: center; /* Alinha os links verticalmente ao centro */
-    gap: 50px; /* Espaço entre os links */
-    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
-
     position: absolute;
     /* Permite posicionar o contêiner com precisão */
-    top: 100px;
+    top: 65px;
     /* Ajuste a posição para baixo para deixar espaço para a logo */
     left: 0;
     /* Margem à esquerda do contêiner */
@@ -89,14 +90,11 @@ html {
     /* Centraliza os links horizontalmente */
     align-items: center;
     /* Alinha os links verticalmente ao centro */
-    gap: 40px;
+    gap: 50px;
     /* Espaço entre os links */
-    padding: 25px;
-    /* Adiciona espaço interno ao contêiner */
     box-sizing: border-box;
     /* Inclui padding e bordas no cálculo da largura */
 
-    z-index: 2;
 
 }
 
@@ -113,9 +111,6 @@ a {
 
 a:hover {
 
-    color: rgb(35, 18, 189); /* Altera a cor do link quando o mouse passa sobre ele */
-    text-decoration: none; /* Adiciona um sublinhado quando o link é hover */
-
     color: rgb(35, 18, 189);
     /* Altera a cor do link quando o mouse passa sobre ele */
     text-decoration: none;
@@ -127,26 +122,15 @@ a:hover {
 /* Estiliza a logo */
 .logo {
 
-    position: absolute; /* Permite posicionar a logo em qualquer lugar da página */
-    top: -40px; /* Ajusta a posição no topo da página; ajuste conforme necessário *
-    z-index: 0; /* Garante que a logo fique acima dos outros elementos */
-    display: flex; /* Usa Flexbox para centralizar a logo se necessário */
-
     position: absolute;
     /* Permite posicionar a logo em qualquer lugar da página */
     top: -40px;
-    /* Ajusta a posição no topo da página; ajuste conforme necessário */
-    left: 50%;
-    /* Centraliza a logo horizontalmente */
-    transform: translateX(-50%);
-    /* Ajusta a posição horizontal para centralizar a logo */
-    z-index: 0;
-    /* Garante que a logo fique acima dos outros elementos */
+    /* Ajusta a posição no topo da página; ajuste conforme necessário *
+    z-index: 0; /* Garante que a logo fique acima dos outros elementos */
     display: flex;
     /* Usa Flexbox para centralizar a logo se necessário */
 
-    align-items: center;
-    justify-content: center;
+    
 }
 
 .logo img {
