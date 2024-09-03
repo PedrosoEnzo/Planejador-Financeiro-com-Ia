@@ -16,7 +16,7 @@ html {
 /* Estiliza a imagem de fundo */
 .background-image {
     background-image:
-        linear-gradient(rgba(0, 0, 0, 5), rgba(0, 0, 0, 0.3)),
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
         url('img1.jpg'); /* Define a imagem de fundo com gradiente */
     background-size: cover; /* Faz com que a imagem cubra o contêiner */
     background-position: center; /* Centraliza a imagem */
@@ -33,14 +33,13 @@ html {
 /* Estiliza o contêiner do texto */
 .text-container {
     position: absolute; /* Permite posicionar o contêiner com precisão */
-    top: 100px; /* Ajuste a posição para baixo para deixar espaço para a logo */
+    top: 65px; /* Ajuste a posição para baixo para deixar espaço para a logo */
     left: 0; /* Margem à esquerda do contêiner */
     right: 0; /* Margem à direita do contêiner */
     display: flex; /* Usa Flexbox para alinhamento */
     justify-content: center; /* Centraliza os links horizontalmente */
     align-items: center; /* Alinha os links verticalmente ao centro */
-    gap: 40px; /* Espaço entre os links */
-    padding: 25px; /* Adiciona espaço interno ao contêiner */
+    gap: 50px; /* Espaço entre os links */
     box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
     z-index: 2;
 
@@ -57,15 +56,13 @@ a {
 a:hover {
     color: rgb(35, 18, 189); /* Altera a cor do link quando o mouse passa sobre ele */
     text-decoration: none; /* Adiciona um sublinhado quando o link é hover */
-    font-weight: bold;
+
 }
 
 /* Estiliza a logo */
 .logo {
     position: absolute; /* Permite posicionar a logo em qualquer lugar da página */
-    top: -40px; /* Ajusta a posição no topo da página; ajuste conforme necessário */
-    left: 50%; /* Centraliza a logo horizontalmente */
-    transform: translateX(-50%); /* Ajusta a posição horizontal para centralizar a logo */
+    top: -40px; /* Ajusta a posição no topo da página; ajuste conforme necessário *
     z-index: 0; /* Garante que a logo fique acima dos outros elementos */
     display: flex; /* Usa Flexbox para centralizar a logo se necessário */
     align-items: center;
