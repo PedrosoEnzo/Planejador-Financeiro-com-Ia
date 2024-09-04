@@ -1,92 +1,112 @@
-body {
-    font-family: Arial, sans-serif;
-    color: #fff;
-    line-height: 1.6;
+/* Define o estilo do corpo da página */
+body, html {
     margin: 0;
     padding: 0;
-    background-color: #0e1345;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
 }
 
+/* Estiliza a imagem de fundo usando background-image */
+.background-image {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.726), rgba(0, 0, 0, 0.3)),
+        url('img1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+/* Estiliza o cabeçalho */
 header {
-    background-color: #0e1345;
-    color: #fff;
-    padding: 10px 0;
     text-align: center;
+    padding: 20px;
+    color: white;
+    z-index: 1;
 }
 
-header h1 {
-    margin: 0;
+/* Estiliza o contêiner de texto */
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Ajuste o valor se necessário */
+    margin: 0 auto;
 }
 
+/* Estiliza o menu de navegação */
 nav ul {
     list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    padding-top: 28px;
+    margin: 0;
+    display: flex;
+    gap: 70px; /* Ajuste o valor se necessário */
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
+    color: aliceblue;
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-section {
-    padding: 20px;
-    margin: 20px;
-    background-color: black;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+nav ul li a:hover {
+    color: rgb(77, 57, 255);
+    text-decoration: none; 
 }
 
-h2 {
-    color: #fff;
+/* Estiliza o formulário de contato */
+#contact {
+    margin: 50px auto;
+    width: 50%;
+    color: white;
+    text-align: center;
 }
 
-.faq-item {
-    margin-bottom: 15px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    margin-top: 10px;
-}
-
-form input,
-form textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+#contact input, #contact textarea {
     width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 15px;
+  
 }
 
-form button {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #0e1345;
-    color: #fff;
+#contact button {
+    padding: 10px 25px;
+    background-color: #100855;
+    color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-form button:hover {
-    background-color: #0e1345;
+#contact button:hover {
+    background-color: #10155e;
 }
 
+/* Estiliza o rodapé */
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #0e1345;
-    color: #fff;
-    width: 100%;
-    bottom: 0;
+    padding: 23px;
+    color: white;
+}
 
+/* Estiliza o logo */
+.logo {
+    position: absolute;
+    top: -70px;
+    left: -40px;
+    z-index: 1;
+}
+
+.logo img {
+    width: 303px;
 }

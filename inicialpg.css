@@ -16,7 +16,7 @@ html {
 /* Estiliza a imagem de fundo */
 .background-image {
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0)),
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.0)),
         url('img1.jpg');
     background-size: cover;
     background-position: center;
@@ -33,7 +33,7 @@ html {
 /* Estiliza o contêiner do texto */
 .text-container {
     position: absolute;
-    top: 59px;
+    top: 48px;
     left: 0;
     right: 0;
     display: flex;
@@ -41,18 +41,19 @@ html {
     align-items: center;
     gap: 70px;
     box-sizing: border-box;
+    
 }
 
 /* Estiliza os links */
 a {
     color: aliceblue;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 14px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 a:hover {
-    color: rgb(35, 18, 189);
+    color: rgb(77, 57, 255);
     text-decoration: none;
 }
 
@@ -136,8 +137,8 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 /* Estiliza a logo */
 .logo {
     position: absolute;
-    top: -11.8%;
-    left: -30px;
+    top: -13%;
+    left: -50px;
     z-index: 0;
     display: flex;
 }
@@ -146,3 +147,5 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 325px;
     height: auto;
 }
+
+
