@@ -23,12 +23,12 @@ html {
 
 /* Estiliza a caixa de login */
 .login-box {
-    background: rgba(20, 23, 189, 0.068);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.219);
-    backdrop-filter: blur(11px);
-    -webkit-backdrop-filter: blur(11px);
+    background: rgba(20, 23, 189, 0);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.568);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(15px);
     border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.336);
+    border: 1px solid rgba(0, 0, 0, 0.103);
     width: 300px;
     padding: 20px;
     box-sizing: border-box;

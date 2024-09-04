@@ -26,10 +26,10 @@ html {
 
 /* Estiliza a caixa de login */
 .login-box {
-    background: rgba(11, 18, 59, 0.068);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.333);
-    backdrop-filter: blur(11px);
-    -webkit-backdrop-filter: blur(11px);
+    background: rgba(11, 18, 59, 0);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.575);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(15px);
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.336);
     width: 300px;
@@ -104,6 +104,6 @@ html {
 }
 
 .criarconta a:hover {
-    color: #171d8a;
+    color: #7e86fc;
     /* Cor do link ao passar o mouse */
 }
