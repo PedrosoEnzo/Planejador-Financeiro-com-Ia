@@ -22,7 +22,7 @@ html {
 /* Estiliza a imagem de fundo */
 .background-image {
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0)),
         url('img1.jpg');
     /* Define a imagem de fundo com gradiente */
     background-size: cover;
@@ -51,7 +51,7 @@ html {
 .text-container {
     position: absolute;
     /* Permite posicionar o contêiner com precisão */
-    top: 65px;
+    top: 60px;
     /* Ajuste a posição para baixo para deixar espaço para a logo */
     left: 0;
     /* Margem à esquerda do contêiner */
@@ -91,7 +91,8 @@ a:hover {
 .logo {
     position: absolute;
     /* Permite posicionar a logo em qualquer lugar da página */
-    top: -40px;
+    top: -12%;
+   left: -30px;
     /* Ajusta a posição no topo da página; ajuste conforme necessário */
     z-index: 0;
     /* Garante que a logo fique acima dos outros elementos */
@@ -100,7 +101,7 @@ a:hover {
 }
 
 .logo img {
-    width: 255px;
+    width: 325px;
     /* Define a largura da logo; ajuste para o tamanho desejado */
     height: auto;
     /* Mantém a proporção da logo; ajuste a altura automaticamente */
