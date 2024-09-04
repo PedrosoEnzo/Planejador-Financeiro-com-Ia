@@ -8,43 +8,59 @@
     <link rel="stylesheet" href="inicialpg.css"> <!-- Vincula o CSS externo -->
 </head>
 
-
-
 <body>
     <div class="background-container">
-        <!-- Contêiner que envolve a imagem de fundo e o texto -->
-        <div class="background-image">
-            <!-- Div que define a imagem de fundo -->
-        </div>
+        <div class="background-image"></div>
 
         <div class="text-container">
             <div class="link-sobre">
-
-
                 <a href="inicialpg.html">Inicio</a>
             </div>
             <div class="link-login">
-
                 <a href="login.html">Acesse sua conta</a>
             </div>
-
             <div class="link-sobre">
-
                 <a href="sobre.html">Sobre</a>
             </div>
-
             <div class="link-suporte">
-
                 <a href="suporte.html">Suporte</a>
             </div>
         </div>
 
+  
+        <!-- Contêiner das criptomoedas -->
+        <div class="crypto-container">
+            <div class="crypto" id="bitcoin">
+                <span class="crypto-symbol">BTC</span>
+                <h4>Bitcoin</h4>
+                <p class="price">$<span id="btc-price">0.00</span></p>
+                <p class="change" id="btc-change">0.00%</p>
+            </div>
+            <div class="crypto" id="ethereum">
+                <span class="crypto-symbol">ETH</span>
+                <h4>Ethereum</h4>
+                <p class="price">$<span id="eth-price">0.00</span></p>
+                <p class="change" id="eth-change">0.00%</p>
+            </div>
+            <div class="crypto" id="bnb">
+                <span class="crypto-symbol">BNB</span>
+                <h4>BNB</h4>
+                <p class="price">$<span id="bnb-price">0.00</span></p>
+                <p class="change" id="bnb-change">0.00%</p>
+            </div>
+            <div class="crypto" id="solana">
+                <span class="crypto-symbol">SOL</span>
+                <h4>Solana</h4>
+                <p class="price">$<span id="sol-price">0.00</span></p>
+                <p class="change" id="sol-change">0.00%</p>
+            </div>
+        </div>
+    
         <div class="logo">
-
             <img src="logo.png" alt="Logo">
         </div>
     </div>
+    <script src="inicialpg.js"></script>
 </body>
-
 
 </html>
