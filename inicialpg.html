@@ -10,7 +10,9 @@
 
 <body>
     <div class="background-container">
-        <div class="background-image"></div>
+        <div class="background-image">
+            <!-- Div que define a imagem de fundo -->
+        </div>
 
         <div class="text-container">
             <div class="link-sobre">
@@ -19,57 +21,50 @@
             <div class="link-login">
                 <a href="login.html">Acesse sua conta</a>
             </div>
+
             <div class="link-sobre">
                 <a href="sobre.html">Sobre</a>
             </div>
+
             <div class="link-suporte">
                 <a href="suporte.html">Suporte</a>
             </div>
         </div>
 
-  
         <!-- Contêiner das criptomoedas -->
         <div class="crypto-container">
             <div class="crypto" id="bitcoin">
-                <img src="btclogo.png" alt="" width="30px">
+                <img src="btclogo.png" alt="Bitcoin" width="30px">
                 <span class="crypto-symbol">BTC</span>
-               
                 <p class="price">$ <span id="btc-price">0.00</span></p>
                 <p class="change" id="btc-change">0.00%</p>
-               
             </div>
             <div class="crypto" id="ethereum">
-                <img src="ethlogo.png" alt="" width="30px">
+                <img src="ethlogo.png" alt="Ethereum" width="30px">
                 <span class="crypto-symbol">ETH</span>
-               
                 <p class="price">$ <span id="eth-price">0.00</span></p>
                 <p class="change" id="eth-change">0.00%</p>
-               
             </div>
-            <div class="crypto" id="bnb">
-                <img src="bnblogo.png" alt="" width="30px">
+            <div class="crypto" id="binancecoin">
+                <img src="bnblogo.png" alt="Binance Coin" width="30px">
                 <span class="crypto-symbol">BNB</span>
-               
                 <p class="price">$ <span id="bnb-price">0.00</span></p>
                 <p class="change" id="bnb-change">0.00%</p>
-                
             </div>
             <div class="crypto" id="solana">
-                <img src="sollogo.png" alt="" width="30px">
+                <img src="sollogo.png" alt="Solana" width="30px">
                 <span class="crypto-symbol">SOL</span>
-               
                 <p class="price">$ <span id="sol-price">0.00</span></p>
                 <p class="change" id="sol-change">0.00%</p>
-               
             </div>
         </div>
-       
-    
+
         <div class="logo">
             <img src="logo.png" alt="Logo">
         </div>
     </div>
-    <script src="inicialpg.js"></script>
+
+    <script src="script.js"></script> <!-- Vincula o JavaScript externo -->
 </body>
 
 </html>
