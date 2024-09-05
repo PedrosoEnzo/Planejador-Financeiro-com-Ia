@@ -41,7 +41,6 @@ html {
     align-items: center;
     gap: 70px;
     box-sizing: border-box;
-    
 }
 
 /* Estiliza os links */
@@ -67,9 +66,8 @@ a:hover {
     flex-direction: column;
     align-items: flex-end;
     gap: 20px;
-    
 
-/*login-box*/
+    /*login-box*/
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 5.1);
     background: rgba(3, 3, 46, 0.205);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.822);
@@ -82,20 +80,17 @@ a:hover {
     box-sizing: border-box;
     left: auto;
     border-radius: 8%;
-   
 }
 
 /* Estiliza cada criptomoeda */
 .crypto {
-   
     padding: 5px;
     border-radius: 10px;
     width: 260px; /* Ajuste a largura conforme necessário */
     color: white;
- display: flex;
- justify-content: space-around;
- gap: 5px;
-
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
 }
 
 .crypto-symbol {
@@ -106,22 +101,16 @@ a:hover {
     padding-right: 15px;
 }
 
-
-
-
 .price {
     font-size: 14px;
     margin: 5px 0;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .change {
     font-size: 14px;
     margin: 5px 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 }
 
 .change.positive {
@@ -131,8 +120,6 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 .change.negative {
     color: rgb(155, 2, 2);
 }
-
-
 
 /* Estiliza a logo */
 .logo {
@@ -147,5 +134,3 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 325px;
     height: auto;
 }
-
-
