@@ -4,7 +4,7 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
-    
+
 }
 
 /* Estiliza o <div> com a classe 'background-image' */
@@ -20,8 +20,8 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-   
-    
+
+
 }
 
 /* Estiliza a caixa de login */
@@ -106,4 +106,18 @@ html {
 .criarconta a:hover {
     color: #7e86fc;
     /* Cor do link ao passar o mouse */
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 100px;
+
+}
+
+a:hover {
+    color: rgb(77, 57, 255);
+    text-decoration: none;
 }
