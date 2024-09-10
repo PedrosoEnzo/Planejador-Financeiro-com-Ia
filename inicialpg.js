@@ -40,3 +40,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Atualiza os preços a cada 5 segundos
     setInterval(fetchCryptoPrices, 3000);
 });
+
