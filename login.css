@@ -107,3 +107,16 @@ html {
     color: #7e86fc;
     /* Cor do link ao passar o mouse */
 }
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+padding-top: 100px;
+
+}
+a:hover {
+    color: rgb(77, 57, 255);
+    text-decoration: none;
+}
