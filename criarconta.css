@@ -1,107 +1,101 @@
 /* Define estilos para os elementos <body> e <html> para garantir que a página use toda a altura disponível */
 body,
 html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+    height: 100%; /* Define a altura como 100% da tela */
 }
 
-/* Estiliza o <div> com a classe 'background-image' */
+/* Estiliza o <div> com a classe 'background-image' para configurar a imagem de fundo */
 .background-image {
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.192), rgba(0, 0, 0, 0.3)),
-        url('img1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.192), rgba(0, 0, 0, 0.3)), /* Aplica um gradiente transparente sobre a imagem */
+        url('img1.jpg'); /* Define a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o contêiner */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-attachment: fixed; /* Fixa a imagem enquanto a página rola */
+    height: 100vh; /* Define a altura como 100% da altura da viewport */
+    display: flex; /* Utiliza flexbox para alinhar o conteúdo */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
 }
 
-/* Estiliza a caixa de login */
+/* Estiliza a caixa de login com sombra, desfoque e bordas arredondadas */
 .login-box {
-    background: rgba(20, 23, 189, 0);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.568);
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(15px);
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.103);
-    width: 300px;
-    padding: 20px;
-    box-sizing: border-box;
+    background: rgba(20, 23, 189, 0); /* Fundo transparente */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.568); /* Sombra ao redor da caixa */
+    backdrop-filter: blur(0px); /* Filtro de desfoque para o fundo */
+    -webkit-backdrop-filter: blur(15px); /* Desfoque no fundo para navegadores WebKit */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 1px solid rgba(0, 0, 0, 0.103); /* Borda sutil */
+    width: 300px; /* Define a largura da caixa */
+    padding: 20px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui o padding no cálculo da largura */
 }
 
 /* Estiliza o título <h1> dentro da caixa de login */
 .login-box h1 {
-    margin: 0 0 20px;
-    font-size: 24px;
-    color: #ffffff;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
+    margin: 0 0 20px; /* Margem inferior para espaçamento */
+    font-size: 24px; /* Tamanho do texto */
+    color: #ffffff; /* Cor do texto */
+    font-family: 'Gill Sans', sans-serif; /* Fonte utilizada no título */
+    text-align: center; /* Centraliza o título */
 }
 
-/* Estiliza a caixa de texto dentro da caixa de login */
+/* Estiliza a caixa de texto (textarea) dentro da caixa de login */
 .login-box textarea {
-    margin: 0 0 10px;
-    font-size: 14px;
-    box-sizing: border-box;
-    height: 40px;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #333;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0 0 10px; /* Margem inferior para espaçamento */
+    font-size: 14px; /* Tamanho da fonte */
+    box-sizing: border-box; /* Inclui padding no cálculo da largura */
+    height: 40px; /* Altura do campo de texto */
+    width: 100%; /* Largura de 100% do contêiner */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #aaa; /* Borda cinza clara */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #fff; /* Cor de fundo branca */
+    color: #333; /* Cor do texto */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transição suave para a borda e a sombra ao focar */
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif; /* Fonte utilizada */
 }
-
-
 
 /* Estiliza o botão dentro da caixa de login */
 .login-box button {
-    width: 100%;
-    height: 40px;
-    background-color: #0e1345;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
-    padding: 0;
-    transition: background-color 0.3s;
+    width: 100%; /* Largura total do botão */
+    height: 40px; /* Altura do botão */
+    background-color: #0e1345; /* Cor de fundo azul escuro */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor em formato de mão ao passar sobre o botão */
+    margin-top: 20px; /* Espaçamento acima do botão */
+    padding: 0; /* Remove o preenchimento interno */
+    transition: background-color 0.3s; /* Transição suave da cor de fundo ao passar o mouse */
 }
 
-/* Estiliza o botão em hover */
+/* Estiliza o botão ao passar o mouse */
 .login-box button:hover {
-    background-color: #171a72;
+    background-color: #171a72; /* Muda a cor do botão ao passar o mouse */
+}
+
+/* Estiliza o contêiner para o link de cadastro */
+.criarconta {
+    margin-top: 10px; /* Espaçamento acima do link de cadastro */
+    text-align: center; /* Centraliza o link */
 }
 
 /* Estiliza o link de cadastro */
-.criarconta {
-    margin-top: 10px;
-    text-align: center;
-}
-
 .criarconta a {
-    text-decoration: none;
-    /* Remove o sublinhado */
-    color: #ffffff;
-    /* Cor do link */
-    font-size: 10px;
-    /* Tamanho da fonte */
-    font-weight: bold;
-    /* Texto em negrito */
-    transition: color 0.3s;
-    /* Transição suave para a cor */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #ffffff; /* Cor do texto */
+    font-size: 10px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    transition: color 0.3s; /* Transição suave para a cor ao passar o mouse */
+    font-family: 'Segoe UI', sans-serif; /* Fonte utilizada no link */
 }
 
+/* Estiliza o link de cadastro ao passar o mouse */
 .criarconta a:hover {
-    color: #23157e;
-    /* Cor do link ao passar o mouse */
+    color: #23157e; /* Muda a cor do link ao passar o mouse */
 }
