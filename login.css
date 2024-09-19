@@ -32,7 +32,9 @@ html {
     width: 300px; /* Define a largura da caixa */
     padding: 20px; /* Espaçamento interno */
     box-sizing: border-box; /* Inclui padding no cálculo da largura */
+ 
 }
+
 
 /* Estiliza o título <h1> dentro da caixa de login */
 .login-box h1 {
@@ -77,6 +79,7 @@ html {
 /* Estiliza o botão ao passar o mouse */
 .login-box button:hover {
     background-color: #110f4e; /* Muda a cor do botão ao passar o mouse */
+    
 }
 
 /* Estiliza o contêiner do link de cadastro */

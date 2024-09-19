@@ -35,8 +35,6 @@ html {
     width: 100%;
     /* Largura de 100% do contêiner */
     position: absolute;
-    top: 0;
-    left: 0;
     z-index: -1;
     /* Coloca a imagem de fundo atrás de outros elementos */
 }
@@ -78,7 +76,7 @@ a:hover {
     position: absolute;
     top: 50%;
     /* Centraliza verticalmente */
-    left: 90px;
+    left: 100px;
     transform: translateY(-50%);
     /* Ajusta para centralizar */
     color: rgb(255, 255, 255);
@@ -118,6 +116,7 @@ a:hover {
     /* Muda a cor de fundo */
     color: rgb(167, 167, 167);
     /* Muda a cor do texto */
+    
 }
 
 /* Contêiner das criptomoedas no lado direito */
@@ -153,6 +152,11 @@ a:hover {
     left: auto;
     /* Ajuste de posição */
     border-radius: 8%;
+  
+}
+.crypto-container :hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Estiliza cada item de criptomoeda */
@@ -171,6 +175,7 @@ a:hover {
     /* Distribui os itens */
     gap: 5px;
     /* Espaçamento entre os itens */
+ 
 }
 
 /* Estiliza o símbolo da criptomoeda */
@@ -183,6 +188,7 @@ a:hover {
     /* Margem superior */
     padding-right: 15px;
     /* Espaçamento à direita */
+  
 }
 
 /* Estiliza o preço da criptomoeda */
@@ -192,6 +198,7 @@ a:hover {
     margin: 5px 0;
     /* Margem ao redor do texto */
     font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+
 }
 
 /* Estiliza a variação de preço da criptomoeda */
@@ -199,6 +206,7 @@ a:hover {
     font-size: 14px;
     margin: 5px 0;
     font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+ 
 }
 
 /* Cor verde para variação positiva */
