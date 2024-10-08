@@ -20,7 +20,7 @@ html {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.0)),
         /* Aplica um gradiente sobre a imagem */
-        url('img1.jpg');
+        url('../IMG/img1.jpg');
     /* Define a imagem de fundo */
     background-size: cover;
     /* Cobre toda a área do contêiner */

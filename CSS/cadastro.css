@@ -10,7 +10,7 @@ html {
 .background-image {
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.192), rgba(0, 0, 0, 0.3)), /* Aplica um gradiente sobre a imagem */
-        url('img1.jpg'); /* Define a imagem de fundo */
+        url('../IMG/img1.jpg'); /* Define a imagem de fundo */
     background-size: cover; /* Cobre todo o contêiner com a imagem */
     background-position: center; /* Centraliza a imagem de fundo */
     background-repeat: no-repeat; /* Não repete a imagem */

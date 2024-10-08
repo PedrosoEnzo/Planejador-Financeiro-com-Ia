@@ -1,0 +1,74 @@
+* {
+    overflow: hidden;
+    margin: 0%;
+}
+
+.background-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.726), rgba(0, 0, 0, 0.3)), url('../IMG/img1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a:hover {
+    color: rgb(77, 57, 255);
+    text-decoration: none;
+}
+ 
+
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.team-member {
+    text-align: center;
+ 
+}
+
+.team-member img {
+    width: 150px; /* Tamanho fixo */
+    height: 150px; /* Tamanho fixo para quadrado */
+    object-fit: cover; /* Corta a imagem para preencher o espaço */
+    border-radius: 50%; /* Adiciona borda arredondada */
+    border: 3px solid blue;
+}
+
+.logo {
+    position: absolute;
+    top: -70px;
+    left: -40px;
+    z-index: 1;
+}
+
+.logo img {
+    width: 303px;
+}
+
+
