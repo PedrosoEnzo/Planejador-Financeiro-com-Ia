@@ -1,23 +1,41 @@
 body {  
     font-family: Arial, sans-serif;
     margin: 20px;
-  }
-  form {
-    max-width: 500px;
-    margin: auto;
-  }
-  label, input, select {
-    display: block;
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  button {
+}
+.background-image {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.726), rgba(0, 0, 0, 0.3)), /* Sobrepõe um gradiente escuro */
+        url('../IMG/img1.jpg'); /* Caminho da imagem de fundo */
+    background-size: cover; /* A imagem cobre toda a área */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    background-attachment: fixed; /* Fixa a imagem enquanto a página rola */
+    height: 100%; /* O fundo ocupa 100% da altura */
+    width: 100%; /* O fundo ocupa 100% da largura */
+    position: absolute; /* Posiciona a imagem de fundo de forma absoluta */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    z-index: -1; /* Coloca a imagem de fundo atrás de outros elementos */
+}
+
+button {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #1d0b80;
     color: white;
     border: none;
     cursor: pointer;
-  }
-  button:hover {
-    background-color: #45a049;
-  }
+}
+
+button:hover {
+    background-color: #081956;
+}
+
+.all {
+    display: flex;
+    flex-direction: column; /* Adicionado para empilhar os elementos */
+    align-items: center;    /* Centraliza os itens horizontalmente */
+    padding-top: 180px;
+}
+h1{
+    color: white;
+}

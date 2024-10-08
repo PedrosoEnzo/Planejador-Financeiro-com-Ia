@@ -4,77 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário Financeiro</title>
+  <link rel="stylesheet" href="../CSS/formulario.css">
 </head>
 <body>
+      <!-- Remover o <img> da imagem de fundo -->
+      <div class="background-image"></div>
+      
+<div class="all">
+  <h1>Responda ao formulário</h1>
 
-  <h1>Formulário sobre sua Vida Financeira</h1>
-  <form id="financialForm">
-    <label for="renda">Qual é a sua renda mensal?</label>
-    <input type="number" id="renda" name="renda" required>
-
-    <label for="despesas">Quanto você gasta mensalmente?</label>
-    <input type="number" id="despesas" name="despesas" required>
-
-    <label for="objetivo">Qual é o seu principal objetivo financeiro?</label>
-    <select id="objetivo" name="objetivo" required>
-      <option value="aposentadoria">Aposentadoria</option>
-      <option value="viagem">Viagens</option>
-      <option value="compras">Compras</option>
-      <option value="educacao">Pagar estudos</option>
-      <option value="estabilidade">Estabilidade</option>
-    </select>
-
-    <label for="perfil">Qual é o seu perfil de investidor?</label>
-    <select id="perfil" name="perfil" required>
-      <option value="conservador">Conservador</option>
-      <option value="moderado">Moderado</option>
-      <option value="agressivo">Agressivo</option>
-      <option value="naoinveste">Não Invisto</option>
-    </select>
-
-    <button type="submit">Enviar</button>
-  </form>
-
-  <div id="resultado" style="margin-top: 20px;"></div>
-
-  <script>
-    document.getElementById("financialForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      // Coletar dados do formulário
-      const renda = parseFloat(document.getElementById("renda").value);
-      const despesas = parseFloat(document.getElementById("despesas").value);
-      const objetivo = document.getElementById("objetivo").value;
-      const perfil = document.getElementById("perfil").value;
-
-      // Cálculo de sobra mensal
-      const sobra = renda - despesas;
-
-      // Direcionamento baseado nas respostas
-      let mensagem = '';
-
-      if (sobra < 0) {
-        mensagem = "Você está gastando mais do que ganha. É importante reduzir suas despesas ou aumentar sua renda antes de pensar em investir.";
-      } else if (sobra === 0) {
-        mensagem = "Você está equilibrado entre renda e despesas, mas seria interessante encontrar maneiras de poupar uma parte da sua renda.";
-      } else {
-        mensagem = `Você está economizando R$ ${sobra.toFixed(2)} por mês. Aqui estão algumas sugestões baseadas no seu perfil de investidor e objetivo:\n\n`;
-
-        if (perfil === "conservador") {
-          mensagem += "Sugerimos investir em produtos de baixo risco, como Tesouro Direto, CDBs de bancos sólidos e fundos de renda fixa.";
-        } else if (perfil === "moderado") {
-          mensagem += "Como investidor moderado, você pode diversificar sua carteira com Tesouro Direto, CDBs e fundos de investimento multimercado.";
-        } else if (perfil === "agressivo") {
-          mensagem += "Como investidor agressivo, você pode buscar ativos de maior risco e potencial de retorno, como ações, fundos imobiliários e criptomoedas.";
-        }
-
-        // Personalização adicional com base no objetivo
-        mensagem += "\n\nPara o seu objetivo de " + objetivo + ", recomendamos ajustar a alocação do seu portfólio para atingir suas metas no prazo desejado.";
-      }
-
-      document.getElementById("resultado").innerText = mensagem;
-    });
-  </script>
-
+  <a href="pergunta1.html">
+    <button type="enviar">Iniciar</button>
+  </a>
+ 
+</div>
 </body>
 </html>

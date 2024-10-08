@@ -1,0 +1,76 @@
+/* Define o estilo do corpo da página e da tag <html> */
+body, html {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+    height: 100%; /* Garante que o corpo ocupe 100% da altura da janela */
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    overflow: hidden; /* Remove a barra de rolagem */
+}
+
+/* Estiliza a imagem de fundo da página */
+.background-image {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.726), rgba(0, 0, 0, 0.3)), /* Sobrepõe um gradiente escuro */
+        url('../IMG/img1.jpg'); /* Caminho da imagem de fundo */
+    background-size: cover; /* A imagem cobre toda a área */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    background-attachment: fixed; /* Fixa a imagem enquanto a página rola */
+    height: 100%; /* O fundo ocupa 100% da altura */
+    width: 100%; /* O fundo ocupa 100% da largura */
+    position: absolute; /* Posiciona a imagem de fundo de forma absoluta */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    z-index: -1; /* Coloca a imagem de fundo atrás de outros elementos */
+}
+
+/* Estiliza a seção de renda */
+#renda {
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    height: 100%; /* Ocupa toda a altura */
+    color: white; /* Cor do texto branca */
+}
+
+/* Estiliza o formulário de contato */
+#contact {
+    text-align: center; /* Centraliza o texto dentro do formulário */
+   
+}
+
+/* Estiliza os campos de entrada e a área de texto dentro do formulário */
+#contact input {
+    width: 100%; /* Define a largura dos campos de entrada */
+    padding: 8px; /* Define o preenchimento interno */
+    margin: 10px 0; /* Define margens entre os campos */
+    border-radius: 15px; /* Define cantos arredondados */
+}
+
+/* Estiliza o botão de envio no formulário */
+#contact button {
+    padding: 10px 25px; /* Define o preenchimento interno do botão */
+    background-color: #100855; /* Cor de fundo do botão */
+    color: white; /* Cor do texto no botão */
+    border: none; /* Remove a borda do botão */
+    cursor: pointer; /* Mostra o cursor de mão ao passar sobre o botão */
+}
+
+/* Estiliza o botão ao passar o mouse */
+#contact button:hover {
+    background-color: #10155e; /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* Estiliza o logo da página */
+.logo {
+    position: absolute; /* Posiciona o logo de forma absoluta */
+    top: -50px; /* Ajustado para não ficar fora da tela */
+    left: -30px; /* Ajustado para não ficar fora da tela */
+    z-index: 1; /* Mantém o logo acima de outros elementos */
+}
+
+/* Define o tamanho da imagem do logo */
+.logo img {
+    width: 303px; /* Define a largura do logo */
+}
