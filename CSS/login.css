@@ -55,17 +55,19 @@ html {
     padding: 10px; /* Espaçamento interno */
     border: 1px solid #aaa; /* Borda cinza clara */
     border-radius: 5px; /* Bordas arredondadas */
-    background-color: #fff; /* Cor de fundo branca */
+    background-color: #ffffff00; /* Cor de fundo branca */
     color: #333; /* Cor do texto */
     transition: border-color 0.3s, box-shadow 0.3s; /* Transição suave na borda e sombra */
     font-family: 'Franklin Gothic Medium', sans-serif; /* Fonte personalizada */
+    opacity: 90%;
+
 }
 
 /* Estiliza o botão dentro da caixa de login */
 .login-box button {
     width: 100%; /* O botão ocupa 100% da largura da caixa */
     height: 40px; /* Altura do botão */
-    background-color: #0e1345; /* Cor de fundo azul escuro */
+    background-color: #190e4500; /* Cor de fundo azul escuro */
     color: white; /* Cor do texto branca */
     border: none; /* Remove a borda padrão */
     border-radius: 5px; /* Bordas arredondadas */
@@ -74,6 +76,7 @@ html {
     margin-top: 20px; /* Espaçamento superior */
     padding: 0; /* Remove o preenchimento interno */
     transition: background-color 0.3s; /* Transição suave da cor de fundo ao passar o mouse */
+ 
 }
 
 /* Estiliza o botão ao passar o mouse */
