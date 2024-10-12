@@ -55,11 +55,11 @@ html {
     padding: 10px; /* Espaçamento interno */
     border: 1px solid #aaa; /* Borda cinza clara */
     border-radius: 5px; /* Bordas arredondadas */
-    background-color: #ffffff00; /* Cor de fundo branca */
+    background-color: #fff; /* Cor de fundo branca */
     color: #333; /* Cor do texto */
     transition: border-color 0.3s, box-shadow 0.3s; /* Transição suave na borda e sombra */
     font-family: 'Franklin Gothic Medium', sans-serif; /* Fonte personalizada */
-    opacity: 90%;
+    
 
 }
 
