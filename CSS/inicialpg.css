@@ -144,7 +144,8 @@ a:hover {
     /* Bordas arredondadas */
     border: 1px solid rgba(0, 0, 0, 0.096);
     /* Borda leve */
-    width: 300px;
+    width: 310px;
+    height: 300px;
     /* Largura do contêiner */
     padding: 20px;
     /* Espaçamento interno */
@@ -152,7 +153,7 @@ a:hover {
     left: auto;
     /* Ajuste de posição */
     border-radius: 8%;
-  
+
 }
 .crypto-container :hover{
     transform: scale(1.05);
@@ -175,6 +176,7 @@ a:hover {
     /* Distribui os itens */
     gap: 5px;
     /* Espaçamento entre os itens */
+    padding-top: 13px;
  
 }
 
