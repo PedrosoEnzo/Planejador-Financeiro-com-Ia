@@ -21,9 +21,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 70px;
+    gap: 90px;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 a {
@@ -60,15 +60,6 @@ a:hover {
     border: 3px solid blue;
 }
 
-.logo {
-    position: absolute;
-    top: -70px;
-    left: -40px;
-    z-index: 1;
-}
 
-.logo img {
-    width: 303px;
-}
 
 

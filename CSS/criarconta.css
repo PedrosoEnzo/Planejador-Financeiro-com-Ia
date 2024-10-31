@@ -9,7 +9,7 @@ html {
 /* Estiliza o <div> com a classe 'background-image' para configurar a imagem de fundo */
 .background-image {
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.192), rgba(0, 0, 0, 0.3)), /* Aplica um gradiente transparente sobre a imagem */
+        linear-gradient(rgba(0, 0, 0, 0.533), rgba(0, 0, 0, 0.341)), /* Aplica um gradiente transparente sobre a imagem */
         url('../IMG/img1.jpg'); /* Define a imagem de fundo */
     background-size: cover; /* Faz a imagem cobrir todo o contêiner */
     background-position: center; /* Centraliza a imagem de fundo */
@@ -24,11 +24,11 @@ html {
 /* Estiliza a caixa de login com sombra, desfoque e bordas arredondadas */
 .login-box {
     background: rgba(20, 23, 189, 0); /* Fundo transparente */
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.568); /* Sombra ao redor da caixa */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.507); /* Sombra ao redor da caixa */
     backdrop-filter: blur(0px); /* Filtro de desfoque para o fundo */
     -webkit-backdrop-filter: blur(15px); /* Desfoque no fundo para navegadores WebKit */
     border-radius: 10px; /* Bordas arredondadas */
-    border: 1px solid rgba(0, 0, 0, 0.103); /* Borda sutil */
+    border: 1px solid rgba(0, 0, 0, 0.336); /* Borda sutil */
     width: 300px; /* Define a largura da caixa */
     padding: 20px; /* Espaçamento interno */
     box-sizing: border-box; /* Inclui o padding no cálculo da largura */
@@ -63,7 +63,7 @@ html {
 .login-box button {
     width: 100%; /* Largura total do botão */
     height: 40px; /* Altura do botão */
-    background-color: #0e1345; /* Cor de fundo azul escuro */
+    background-color: rgba(14, 19, 69, 0); /* Fundo transparente */
     color: white; /* Cor do texto */
     border: none; /* Remove a borda padrão */
     border-radius: 5px; /* Bordas arredondadas */
@@ -76,7 +76,7 @@ html {
 
 /* Estiliza o botão ao passar o mouse */
 .login-box button:hover {
-    background-color: #171a72; /* Muda a cor do botão ao passar o mouse */
+    background-color: #18146c; /* Muda a cor do botão ao passar o mouse */
 }
 
 /* Estiliza o contêiner para o link de cadastro */
@@ -97,5 +97,5 @@ html {
 
 /* Estiliza o link de cadastro ao passar o mouse */
 .criarconta a:hover {
-    color: #23157e; /* Muda a cor do link ao passar o mouse */
+    color: #171a71; /* Muda a cor do link ao passar o mouse */
 }

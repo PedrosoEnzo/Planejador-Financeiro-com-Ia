@@ -15,18 +15,14 @@
     </div>
 
     <section id="renda">
-        <form id="contact">
+        <form id="contact" onsubmit="return false;"> <!-- Previne o envio do formulário -->
             <label for="numero">Qual sua renda mensal?</label>
             <input type="number" id="numero" required>
-            <button ty pe="submit">Voltar</button>
-            </div>
-            <div>
-            <a href="../HTML/pergunta2.html">
-                <button type="submit">Avançar</button>
-            </a>
-            </div>
+            <button type="submit" onclick="window.location.href='../HTML/inicialpg.html';">Voltar</button>
+            <button type="button" onclick="window.location.href='../HTML/pergunta2.html';">Avançar</button>
         </form>
     </section>
 
 </body>
 </html>
+

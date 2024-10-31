@@ -42,15 +42,16 @@ html {
 /* Centraliza e organiza o conteúdo de texto no centro da página */
 .text-container {
     position: absolute;
-    top: 48px;
+    top: 60px;
     left: 0;
     right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 70px;
+    gap: 100px;
     /* Define um espaço entre os elementos */
     box-sizing: border-box;
+
 }
 
 /* Estiliza os links */
@@ -76,25 +77,31 @@ a:hover {
     position: absolute;
     top: 50%;
     /* Centraliza verticalmente */
-    left: 100px;
+    left: 180px;
     transform: translateY(-50%);
     /* Ajusta para centralizar */
     color: rgb(255, 255, 255);
     /* Define a cor do texto */
     font-family: 'Lucida Sans', sans-serif;
     /* Fonte do texto */
-    font-size: 22px;
+    font-size:32px;
     /* Tamanho da fonte */
     line-height: 1.3;
     /* Espaçamento entre linhas */
-    max-width: 400px;
+    max-width: 750px;
     /* Define a largura máxima */
-}
+
+    }
+
 
 /* Estiliza o botão azul */
 .btn-azul {
-    display: inline-block;
-    padding: 12px 24px;
+
+    position: relative;
+    
+    margin-left: 2px;
+
+    padding: 19px 25px;
     /* Define o espaçamento interno do botão */
     background-color: rgb(23, 13, 117);
     /* Cor de fundo do botão */
@@ -110,6 +117,7 @@ a:hover {
     /* Animação de transição da cor de fundo */
 }
 
+
 /* Estilo do botão ao passar o mouse */
 .btn-azul:hover {
     background-color: #05104d;
@@ -124,7 +132,7 @@ a:hover {
     position: absolute;
     top: 50%;
     /* Centraliza verticalmente */
-    right: 90px;
+    right: 110px;
     transform: translateY(-50%);
     /* Ajuste para centralização */
     display: flex;
@@ -136,7 +144,7 @@ a:hover {
     /* Espaçamento entre as criptomoedas */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 5.1);
     /* Adiciona uma sombra */
-    background: rgba(3, 3, 46, 0.205);
+    background: rgba(3, 3, 46, 0.093);
     /* Fundo com opacidade */
     backdrop-filter: blur(2px);
     /* Aplica um desfoque no fundo */
@@ -144,20 +152,19 @@ a:hover {
     /* Bordas arredondadas */
     border: 1px solid rgba(0, 0, 0, 0.096);
     /* Borda leve */
-    width: 310px;
-    height: 300px;
+    width: 340px;
+    height: 320px;
     /* Largura do contêiner */
-    padding: 20px;
+    padding: 40px;
     /* Espaçamento interno */
     box-sizing: border-box;
-    left: auto;
+
     /* Ajuste de posição */
     border-radius: 8%;
 
 }
 .crypto-container :hover{
-    transform: scale(1.05);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.125);
 }
 
 /* Estiliza cada item de criptomoeda */
@@ -174,7 +181,7 @@ a:hover {
     /* Alinha os elementos horizontalmente */
     justify-content: space-around;
     /* Distribui os itens */
-    gap: 5px;
+    gap: 8px;
     /* Espaçamento entre os itens */
     padding-top: 13px;
  
@@ -184,7 +191,7 @@ a:hover {
 .crypto-symbol {
     font-family: 'Franklin Gothic Medium', Arial, sans-serif;
     /* Fonte do símbolo */
-    font-size: 16px;
+    font-size: 18px;
     display: block;
     margin-top: 5.5px;
     /* Margem superior */
@@ -195,7 +202,7 @@ a:hover {
 
 /* Estiliza o preço da criptomoeda */
 .price {
-    font-size: 14px;
+    font-size: 16px;
     /* Tamanho da fonte */
     margin: 5px 0;
     /* Margem ao redor do texto */
@@ -205,7 +212,7 @@ a:hover {
 
 /* Estiliza a variação de preço da criptomoeda */
 .change {
-    font-size: 14px;
+    font-size: 16px;
     margin: 5px 0;
     font-family: 'Franklin Gothic Medium', Arial, sans-serif;
  
@@ -226,7 +233,7 @@ a:hover {
     position: absolute;
     top: -13%;
     /* Posiciona o logo fora da área visível inicialmente */
-    left: -50px;
+    left: -36px;
     /* Alinha à esquerda */
     z-index: 0;
     /* Define a camada do logo */
@@ -235,7 +242,7 @@ a:hover {
 
 /* Estiliza a imagem do logo */
 .logo img {
-    width: 325px;
+    width: 390px;
     /* Largura da imagem */
     height: auto;
     /* Altura ajustada proporcionalmente */

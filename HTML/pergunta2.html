@@ -15,11 +15,13 @@
     </div>
 
     <section id="renda">
-        <form id="contact">
+        <form id="contact" onsubmit="return false;"> <!-- Previne o envio do formulário -->
             <label for="numero">Quanto você gasta mensalmente?</label>
             <input type="number" id="numero" required>
-            <button type="submit">Voltar</button>
-            <button type="submit">Avançar</button>
+            <div>
+                <button type="button" onclick="window.history.back();">Voltar</button> <!-- Botão para voltar -->
+                <button type="button" onclick="window.location.href='../HTML/pergunta3.html';">Avançar</button> <!-- Botão para avançar -->
+            </div>
         </form>
     </section>
 
