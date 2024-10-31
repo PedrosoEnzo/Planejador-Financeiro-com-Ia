@@ -46,3 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Define um intervalo para atualizar os preços a cada 3 segundos (3000 milissegundos)
     setInterval(fetchCryptoPrices, 3000);
 });
+
+
+
