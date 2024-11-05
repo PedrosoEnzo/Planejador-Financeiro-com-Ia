@@ -9,7 +9,7 @@ html {
 /* Estiliza o <div> com a classe 'background-image' para definir uma imagem de fundo */
 .background-image {
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.192), rgba(0, 0, 0, 0.3)), /* Aplica um gradiente sobre a imagem */
+        linear-gradient(rgba(0, 0, 0, 0.533), rgba(0, 0, 0, 0.341)), /* Aplica um gradiente sobre a imagem */
         url('../IMG/img1.jpg'); /* Define a imagem de fundo */
     background-size: cover; /* Cobre todo o contêiner com a imagem */
     background-position: center; /* Centraliza a imagem de fundo */
@@ -63,7 +63,7 @@ html {
 .login-box button {
     width: 100%; /* Largura total do botão */
     height: 40px; /* Altura do botão */
-    background-color: #0e1345; /* Cor de fundo do botão */
+    background-color: #0e134500; /* Cor de fundo do botão */
     color: white; /* Cor do texto */
     border: none; /* Remove a borda padrão */
     border-radius: 5px; /* Bordas arredondadas */
