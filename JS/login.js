@@ -1,48 +1,40 @@
 const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
-const bcrypt = require('bcrypt'); // Para hashing de senhas
+const cors = require('cors');
 
 const app = express();
-const port = 3306;
+const port = 3000;
 
-// Configuração do bodyParser
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public')); // Para servir arquivos estáticos, como CSS
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
 
-// Conexão com o banco de dados MySQL
+// Configuração da conexão com o MySQL
 const connection = mysql.createConnection({
     host: 'localhost',
-    user: 'root', // substitua pelo seu usuário do MySQL
-    password: 'root', // substitua pela sua senha do MySQL
-    database: 'tcc_db' // nome do banco de dados que criamos
+    user: 'root', // Substitua pelo seu usuário
+    password: '@Enzo091207', // Substitua pela sua senha
+    database: 'planejador_financeiro',
 });
 
-// Rota de login
-app.post('/login', (req, res) => {
-    const { username, password } = req.body;
-
-    // Consultar usuário no banco de dados
-    connection.query('SELECT * FROM users WHERE username = ?', [username], (error, results) => {
-        if (error) {
-            return res.status(500).send('Erro no servidor');
-        }
-        
-        if (results.length === 0) {
-            return res.status(401).send('Usuário não encontrado');
-        }
-
-        const user = results[0];
-        
-        // Comparar a senha fornecida com a senha armazenada (hash)
-        bcrypt.compare(password, user.password, (err, result) => {
-            if (result) {
-                res.send('Login bem-sucedido!');
-            } else {
-                res.status(401).send('Senha incorreta');
+// Endpoint de login
+app.post('/api/login', (req, res) => {
+    const { email, senha } = req.body;
+    connection.query(
+        'SELECT * FROM usuarios WHERE email = ? AND senha = ?',
+        [email, senha],
+        (error, results) => {
+            if (error) {
+                return res.status(500).json({ error: 'Erro no servidor' });
             }
-        });
-    });
+            if (results.length > 0) {
+                return res.status(200).json({ message: 'Login bem-sucedido!' });
+            } else {
+                return res.status(401).json({ error: 'Credenciais inválidas' });
+            }
+        }
+    );
 });
 
 // Iniciar o servidor
