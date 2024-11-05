@@ -18,13 +18,13 @@
             </div>
 
             <div class="login-box">
-                
+
                 <h1>Bem-vindo(a)</h1>
                 <div class="input-email">
-                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <textarea id="email" name="email" placeholder="Email" required></textarea>
                 </div>
                 <div class="input-senha">
-                    <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                    <textarea id="senha" name="senha" placeholder="Senha" required></textarea>
                 </div>
                 <button id="loginButton">Login</button>
 
@@ -38,36 +38,7 @@
         </div>
     </div>
 
-    <script>
-        document.getElementById('loginButton').addEventListener('click', function () {
-            const email = document.getElementById('email').value;
-            const senha = document.getElementById('senha').value;
-
-            fetch('http://localhost:3000/api/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email, senha }),
-            })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Erro ao fazer login');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    document.getElementById('feedback').innerText = data.message;
-                    // Redirecionar após um pequeno atraso
-                    setTimeout(() => {
-                        window.location.href = 'formulario.html'; // Altere para a URL desejada
-                    }, 2000); // 2000 milissegundos = 2 segundos
-                })
-                .catch(error => {
-                    document.getElementById('feedback').innerText = error.message;
-                });
-        });
-    </script>
+    <script src="../JS/login.js"></script>
 </body>
 
 </html>
