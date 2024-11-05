@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt'); // Para hashing de senhas
 
 const app = express();
-const port = 3000;
+const port = 3306;
 
 // Configuração do bodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -13,8 +13,8 @@ app.use(express.static('public')); // Para servir arquivos estáticos, como CSS
 // Conexão com o banco de dados MySQL
 const connection = mysql.createConnection({
     host: 'localhost',
-    user: 'seu_usuario', // substitua pelo seu usuário do MySQL
-    password: 'sua_senha', // substitua pela sua senha do MySQL
+    user: 'root', // substitua pelo seu usuário do MySQL
+    password: 'root', // substitua pela sua senha do MySQL
     database: 'tcc_db' // nome do banco de dados que criamos
 });
 
