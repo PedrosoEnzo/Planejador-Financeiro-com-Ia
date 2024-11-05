@@ -5,36 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planejador Financeiro com IA</title>
-    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="CSS/login.css">
 </head>
 
 <body>
+
     <div class="background-image">
-        
+
         <div class="text-container">
             <div class="link-inicio">
-                <a href="../public/inicialpg.html">Inicio</a>
+                <a href="inicialpg.html">Inicio</a>
             </div>
-        <div class="login-box">
-         
-            <h1>Bem-vindo(a)</h1>
-            <div class="input-email">
-                <textarea id="email" name="email" placeholder="Email"></textarea>
-            </div>
-            <div class="input-senha">
-                <textarea id="senha" name="senha" placeholder="Senha"></textarea>
-            </div>
-       <a href="../public/formulario.html">
-            <button>Login</button>
-        </a>
 
-            <div class="criarconta">
-                <a href="../public/criarconta.html">Não tem uma conta?</a>
-            </div>
-           
+            <div class="login-box">
+
+                <h1>Bem-vindo(a)</h1>
+                <div class="input-email">
+                    <textarea id="email" name="email" placeholder="Email" required></textarea>
+                </div>
+                <div class="input-senha">
+                    <textarea id="senha" name="senha" placeholder="Senha" required></textarea>
+                </div>
+                <button id="loginButton">Login</button>
+
+                <div id="feedback"></div>
+
+                <div class="criarconta">
+                    <a href="criarconta.html">Não tem uma conta?</a>
+                </div>
+
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function () {
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            fetch('http://localhost:3000/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, senha }),
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro ao fazer login');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById('feedback').innerText = data.message;
+                    // Redirecionar após um pequeno atraso
+                    setTimeout(() => {
+                        window.location.href = 'formulario.html'; // Altere para a URL desejada
+                    }, 2000); // 2000 milissegundos = 2 segundos
+                })
+                .catch(error => {
+                    document.getElementById('feedback').innerText = error.message;
+                });
+        });
+    </script>
 </body>
 
 </html>
