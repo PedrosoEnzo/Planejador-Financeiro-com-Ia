@@ -34,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'public'))); // Serve arquivos está
 
 
 // Endpoint de login
-app.post('/api/login', (req, res) => {
+app.post('/', (req, res) => {
     const { email, senha } = req.body;
     
     connection.query(

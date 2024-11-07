@@ -5,7 +5,7 @@ body {
 .background-image {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.726), rgba(0, 0, 0, 0.3)), /* Sobrepõe um gradiente escuro */
-        url('IMG/img-form.jpg'); /* Caminho da imagem de fundo */
+        url('../IMG/img-form.jpg'); /* Caminho da imagem de fundo */
     background-size: cover; /* A imagem cobre toda a área */
     background-position: center; /* Centraliza a imagem de fundo */
     background-repeat: no-repeat; /* Impede a repetição da imagem */
