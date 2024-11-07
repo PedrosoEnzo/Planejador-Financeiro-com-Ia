@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
@@ -23,7 +22,7 @@ const connection = mysql.createConnection({
 
 // Rota para exibir o formulário
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "login.html"));
+    res.sendFile(path.join(__dirname, '../public/login.html'));
 });
 
 // Endpoint de login
@@ -34,6 +33,7 @@ app.post('/api/login', (req, res) => {
         [email, senha],
         (error, results) => {
             if (error) {
+                console.error("Erro no servidor:", error); // Para depuração
                 return res.status(500).json({ error: 'Erro no servidor' });
             }
             if (results.length > 0) {
@@ -49,4 +49,3 @@ app.post('/api/login', (req, res) => {
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
-

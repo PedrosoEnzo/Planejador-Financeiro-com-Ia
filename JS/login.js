@@ -1,4 +1,6 @@
 document.getElementById('loginButton').addEventListener('click', function() {
+    console.log("Botão de login clicado"); // Verifica se o evento é disparado
+
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
 
@@ -10,6 +12,7 @@ document.getElementById('loginButton').addEventListener('click', function() {
         body: JSON.stringify({ email, senha }),
     })
     .then(response => {
+        console.log("Resposta recebida:", response); // Verifica a resposta
         if (!response.ok) {
             throw new Error('Erro ao fazer login');
         }
@@ -17,10 +20,9 @@ document.getElementById('loginButton').addEventListener('click', function() {
     })
     .then(data => {
         document.getElementById('feedback').innerText = data.message;
-        // Redirecionar para outra página, se necessário
-        // window.location.href = '../public/formulario.html';
     })
     .catch(error => {
+        console.error("Erro:", error); // Verifica se há um erro específico aqui
         document.getElementById('feedback').innerText = error.message;
     });
 });
