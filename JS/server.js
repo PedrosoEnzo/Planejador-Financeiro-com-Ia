@@ -23,7 +23,7 @@ const connection = mysql.createConnection({
 
 // Rota para exibir o formulário
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+    res.sendFile(path.join(__dirname, "login.html"));
 });
 
 // Endpoint de login
