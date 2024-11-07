@@ -1,60 +1,47 @@
+// server.js
 const express = require('express');
-const mysql = require('mysql2');
+const mysql = require('mysql');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 const path = require('path');
 
 const app = express();
-const port = 3000;
-
-// Middleware
-app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public'))); // Serve arquivos estáticos da pasta public
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// Configuração da conexão com o MySQL
+// Configurar a pasta 'public' para servir o HTML e o CSS
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Configurar conexão ao banco de dados MySQL
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root', // Altere para o seu usuário
-    password: '@Enzo091207', // Altere para a sua senha
-    database: 'planejador_financeiro', // Nome do banco
+    host: 'localhost',      // Endereço do servidor MySQL (ajuste se necessário)
+    user: 'root',    // Substitua pelo seu usuário do MySQL
+    password: '@Enzo091207',  // Substitua pela sua senha do MySQL
+    database: 'planejador_financeiro'  // Substitua pelo nome do seu banco de dados
 });
 
-// Teste de conexão
-connection.connect((err) => {
-    if (err) {
-        console.error('Erro ao conectar com o banco de dados: ', err);
-        return;
-    }
-    console.log('Conectado ao banco de dados MySQL.');
+connection.connect(err => {
+    if (err) throw err;
+    console.log('Conectado ao banco de dados MySQL!');
 });
 
-// Endpoint para exibir o formulário HTML
-app.use(express.static(path.join(__dirname, '/login'))); // Serve arquivos estáticos da pasta public
-
-
-// Endpoint de login
-app.post('/', (req, res) => {
+// Rota para autenticação do login
+app.post('/login', (req, res) => {
     const { email, senha } = req.body;
-    
-    connection.query(
-        'SELECT * FROM usuarios WHERE email = ? AND senha = ?',
-        [email, senha],
-        (error, results) => {
-            if (error) {
-                console.error('Erro ao consultar no banco de dados: ', error);
-                return res.status(500).json({ error: 'Erro no servidor' });
-            }
-            if (results.length > 0) {
-                return res.status(200).json({ message: 'Login bem-sucedido!' });
-            } else {
-                return res.status(401).json({ error: 'Credenciais inválidas' });
-            }
+
+    // Query para verificar se o usuário existe no banco
+    const query = 'SELECT * FROM usuarios WHERE email = ? AND senha = ?';
+    connection.query(query, [email, senha], (error, results) => {
+        if (error) throw error;
+
+        if (results.length > 0) {
+            res.json({ success: true, message: 'Login bem-sucedido!' });
+        } else {
+            res.json({ success: false, message: 'Email ou senha incorretos.' });
         }
-    );
+    });
 });
 
-// Iniciar o servidor
-app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`);
+// Iniciar o servidor na porta 3000
+app.listen(3000, () => {
+    console.log('Servidor rodando em http://localhost:3000');
 });
