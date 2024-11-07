@@ -10,10 +10,15 @@ const port = 3000;
 // Middleware
 app.use(cors());
 app.use(express.json());  // Usando express.json para processar JSON
-app.use(express.static(path.join(__dirname, '../public')));  // Servindo arquivos estáticos
+app.use(express.static(path.join(__dirname, '../public')));  // Servindo arquivos estáticos da pasta "public"
 
-// Usando as rotas definidas em routes.js
-app.use('/api', routes);
+// Rota para exibir a página de login
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/login.html'));  // Certifique-se que o caminho está correto
+});
+
+// Usando as rotas para o login
+app.use('/api', routes);  // Roteamento de API para login
 
 // Iniciar o servidor
 app.listen(port, () => {
