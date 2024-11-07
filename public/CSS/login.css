@@ -32,9 +32,7 @@ html {
     width: 300px; /* Define a largura da caixa */
     padding: 20px; /* Espaçamento interno */
     box-sizing: border-box; /* Inclui padding no cálculo da largura */
- 
 }
-
 
 /* Estiliza o título <h1> dentro da caixa de login */
 .login-box h1 {
@@ -45,8 +43,8 @@ html {
     text-align: center; /* Centraliza o título */
 }
 
-/* Estiliza a caixa de texto (textarea) dentro da caixa de login */
-.login-box textarea {
+/* Estiliza a caixa de texto (input) dentro da caixa de login */
+.login-box input {
     margin: 0 0 10px; /* Margem inferior para espaçamento */
     font-size: 14px; /* Tamanho da fonte */
     box-sizing: border-box; /* Inclui o padding no cálculo da largura */
@@ -59,8 +57,6 @@ html {
     color: #333333; /* Cor do texto */
     transition: border-color 0.3s, box-shadow 0.3s; /* Transição suave na borda e sombra */
     font-family: 'Franklin Gothic Medium', sans-serif; /* Fonte personalizada */
-    
-
 }
 
 /* Estiliza o botão dentro da caixa de login */
@@ -76,13 +72,11 @@ html {
     margin-top: 20px; /* Espaçamento superior */
     padding: 0; /* Remove o preenchimento interno */
     transition: background-color 0.3s; /* Transição suave da cor de fundo ao passar o mouse */
- 
 }
 
 /* Estiliza o botão ao passar o mouse */
 .login-box button:hover {
     background-color: #110f4e; /* Muda a cor do botão ao passar o mouse */
-    
 }
 
 /* Estiliza o contêiner do link de cadastro */
@@ -112,7 +106,6 @@ a {
     text-decoration: none; /* Remove sublinhado */
     font-size: 14px; /* Tamanho da fonte */
     font-family: 'Lucida Sans', sans-serif; /* Fonte personalizada */
-
 }
 
 /* Estiliza os links ao passar o mouse */
@@ -120,7 +113,8 @@ a:hover {
     color: rgb(77, 57, 255); /* Muda a cor do link ao passar o mouse */
     text-decoration: none; /* Mantém o sublinhado desativado */
 }
-.link-inicio{
+
+.link-inicio {
     justify-content: center;
     display: flex;
 }
