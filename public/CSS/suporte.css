@@ -11,7 +11,7 @@ body, html {
 .background-image {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.726), rgba(0, 0, 0, 0.3)), /* Sobrepõe um gradiente escuro */
-        url('IMG/img-form.jpg'); /* Caminho da imagem de fundo */
+        url('../IMG/img1.jpg'); /* Caminho da imagem de fundo */
     background-size: cover; /* A imagem cobre toda a área */
     background-position: center; /* Centraliza a imagem de fundo */
     background-repeat: no-repeat; /* Impede a repetição da imagem */
@@ -24,24 +24,56 @@ body, html {
     z-index: -1; /* Coloca a imagem de fundo atrás de outros elementos */
 }
 
-/* Estiliza a seção de renda */
-#renda {
-    display: flex;
-    flex-direction: column; /* Coloca os itens em coluna */
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    height: 100%; /* Ocupa toda a altura */
-    color: white; /* Cor do texto branca */
+/* Estiliza o cabeçalho da página */
+header {
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Define espaçamento interno */
+    color: white; /* Cor do texto branco */
+    z-index: 1; /* Mantém o cabeçalho acima de outros elementos */
+}
+
+/* Estiliza o contêiner de texto para centralização */
+.text-container {
+    display: flex; /* Define como um contêiner flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 20px; /* Define um espaço entre os elementos */
+    margin: 0 auto; /* Centraliza o contêiner */
+}
+
+/* Estiliza o menu de navegação */
+nav ul {
+    list-style: none; /* Remove marcadores de lista */
+    padding-top: 28px; /* Adiciona espaçamento acima */
+    margin: 0; /* Remove margens */
+    display: flex; /* Define como flexbox */
+    gap: 70px; /* Define o espaçamento entre os itens */
+}
+
+/* Estiliza os links do menu de navegação */
+nav ul li a {
+    color: aliceblue; /* Cor clara para os links */
+    text-decoration: none; /* Remove sublinhado dos links */
+    font-size: 14px; /* Define o tamanho da fonte */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Define a fonte */
+}
+
+/* Estiliza os links ao passar o mouse */
+nav ul li a:hover {
+    color: rgb(77, 57, 255); /* Muda a cor ao passar o mouse */
+    text-decoration: none; /* Mantém o link sem sublinhado */
 }
 
 /* Estiliza o formulário de contato */
 #contact {
+    margin: 50px auto; /* Centraliza o formulário */
+    width: 50%; /* Define a largura do formulário */
+    color: white; /* Cor do texto branca */
     text-align: center; /* Centraliza o texto dentro do formulário */
-   
 }
 
 /* Estiliza os campos de entrada e a área de texto dentro do formulário */
-#contact input {
+#contact input, #contact textarea {
     width: 100%; /* Define a largura dos campos de entrada */
     padding: 8px; /* Define o preenchimento interno */
     margin: 10px 0; /* Define margens entre os campos */
@@ -62,11 +94,18 @@ body, html {
     background-color: #10155e; /* Muda a cor de fundo ao passar o mouse */
 }
 
+/* Estiliza o rodapé da página */
+footer {
+    text-align: center; /* Centraliza o texto no rodapé */
+    padding: 23px; /* Adiciona espaçamento no rodapé */
+    color: white; /* Define a cor do texto no rodapé */
+}
+
 /* Estiliza o logo da página */
 .logo {
     position: absolute; /* Posiciona o logo de forma absoluta */
-    top: -50px; /* Ajustado para não ficar fora da tela */
-    left: -30px; /* Ajustado para não ficar fora da tela */
+    top: -70px; /* Posiciona o logo no topo */
+    left: -40px; /* Posiciona o logo à esquerda */
     z-index: 1; /* Mantém o logo acima de outros elementos */
 }
 

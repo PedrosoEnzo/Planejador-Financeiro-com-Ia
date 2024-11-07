@@ -30,7 +30,7 @@ connection.connect((err) => {
 });
 
 // Endpoint para exibir o formulário HTML
-app.use(express.static(path.join(__dirname, 'public'))); // Serve arquivos estáticos da pasta public
+app.use(express.static(path.join(__dirname, '/login'))); // Serve arquivos estáticos da pasta public
 
 
 // Endpoint de login
