@@ -15,14 +15,17 @@
     </div>
 
     <section id="perfil">
-        <form id="contact" onsubmit="return false;"> <!-- Previne o envio do formulário -->
-            <label for="perfil">Qual é o seu perfil de investidor?</label>
-            <select id="perfil" name="perfil" required>
-              <option value="conservador">Conservador</option>
-              <option value="moderado">Moderado</option>
-              <option value="agressivo">Agressivo</option>
+        <div class="form-group">
+            <label for="divida">Se sim, Quanto?</label>
+            <select id="divida" name="divida" required>
+              <option value="nao">Não tenho</option>
+              <option value="0a100">0 a 100</option>
+              <option value="100a500">100 a 500</option>              
+              <option value="500a1000">500 a 1000</option>
+              <option value="1000a5000">1000 a 5000</option>
+              <option value="mais5000">mais de 5000</option>
             </select>
-        </form>
+          </div>
     </section>
 
 </body>

@@ -2,6 +2,9 @@ document.getElementById('loginButton').addEventListener('click', function() {
     const email = document.getElementById('email').value;
     const senha = document.getElementById('senha').value;
 
+    console.log('Tentando enviar requisição para o backend');
+    console.log('Email:', email, 'Senha:', senha);  // Verificando se os dados estão corretos
+
     fetch('http://localhost:3000/api/login', {
         method: 'POST',
         headers: {
@@ -17,11 +20,9 @@ document.getElementById('loginButton').addEventListener('click', function() {
     })
     .then(data => {
         document.getElementById('feedback').innerText = data.message;
-        // Redirecionar para outra página, se necessário
-        // window.location.href = '../public/formulario.html';
     })
     .catch(error => {
         document.getElementById('feedback').innerText = error.message;
+        console.log('Erro no frontend:', error);  // Log de erro no frontend
     });
 });
-
