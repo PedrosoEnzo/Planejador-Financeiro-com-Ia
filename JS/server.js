@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const mysql = require('mysql2'); // Adicionei a importação do mysql
+const mysql = require('mysql2'); // Importando MySQL
 
 // Servir arquivos da pasta `public`
 app.use(express.static(path.join(__dirname, '../public')));
@@ -34,8 +34,12 @@ app.post('/login', (req, res) => {
     db.query(query, [email, senha], (err, results) => {
         if (err) throw err;
         if (results.length > 0) {
+            // Login bem-sucedido
+            console.log('Login bem-sucedido para:', email); // Verifica se o login foi bem-sucedido
             res.send({ success: true, message: 'Login bem-sucedido!' });
         } else {
+            // Login falhou
+            console.log('Falha no login para:', email); // Verifica se a falha ocorreu
             res.send({ success: false, message: 'Email ou senha incorretos.' });
         }
     });
@@ -45,15 +49,12 @@ app.post('/login', (req, res) => {
 app.post('/criarconta', (req, res) => {
     const { nome, telefone, email, senha, datadenascimento } = req.body;
 
-    // Validar se todos os campos estão preenchidos
     if (!nome || !telefone || !email || !senha || !datadenascimento) {
         return res.status(400).send({ success: false, message: 'Todos os campos são obrigatórios.' });
     }
 
-    // Preparar a query para inserir os dados
     const query = 'INSERT INTO usuarios (nome, telefone, email, senha, datadenascimento, created_at) VALUES (?, ?, ?, ?, ?, NOW())';
 
-    // Executar a query para inserir os dados no banco de dados
     db.query(query, [nome, telefone, email, senha, datadenascimento], (err, result) => {
         if (err) {
             console.error('Erro ao cadastrar usuário:', err);
@@ -63,9 +64,8 @@ app.post('/criarconta', (req, res) => {
     });
 });
 
-
 // Iniciar o servidor
-const PORT = 3000; // Adicionei uma variável para definir a porta
+const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
