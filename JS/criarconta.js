@@ -1,4 +1,4 @@
-document.getElementById("formCadastro").addEventListener("submit", function(event) {
+document.getElementById("criar-conta").addEventListener("click", function(event) {
     event.preventDefault();  // Impede o envio tradicional do formulário
 
     const nome = document.getElementById("nome").value;
@@ -7,14 +7,8 @@ document.getElementById("formCadastro").addEventListener("submit", function(even
     const senha = document.getElementById("senha").value;
     const datadenascimento = document.getElementById("datadenascimento").value;
 
-    // Verificar se a senha tem ao menos 6 caracteres (opcional, ajuste conforme necessário)
-    if (senha.length < 6) {
-        alert("A senha deve ter pelo menos 6 caracteres.");
-        return;
-    }
-
     // Enviar os dados para o backend
-    fetch('/criarconta', {
+    fetch('http://localhost:3000/criarconta', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
