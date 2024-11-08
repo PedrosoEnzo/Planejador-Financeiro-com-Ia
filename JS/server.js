@@ -41,6 +41,29 @@ app.post('/login', (req, res) => {
     });
 });
 
+// Rota para cadastro de usuário
+app.post('/criarconta', (req, res) => {
+    const { nome, telefone, email, senha, datadenascimento } = req.body;
+
+    // Validar se todos os campos estão preenchidos
+    if (!nome || !telefone || !email || !senha || !datadenascimento) {
+        return res.status(400).send({ success: false, message: 'Todos os campos são obrigatórios.' });
+    }
+
+    // Preparar a query para inserir os dados
+    const query = 'INSERT INTO usuarios (nome, telefone, email, senha, datadenascimento, created_at) VALUES (?, ?, ?, ?, ?, NOW())';
+
+    // Executar a query para inserir os dados no banco de dados
+    db.query(query, [nome, telefone, email, senha, datadenascimento], (err, result) => {
+        if (err) {
+            console.error('Erro ao cadastrar usuário:', err);
+            return res.status(500).send({ success: false, message: 'Erro ao cadastrar usuário.' });
+        }
+        res.send({ success: true, message: 'Usuário cadastrado com sucesso!' });
+    });
+});
+
+
 // Iniciar o servidor
 const PORT = 3000; // Adicionei uma variável para definir a porta
 app.listen(PORT, () => {
