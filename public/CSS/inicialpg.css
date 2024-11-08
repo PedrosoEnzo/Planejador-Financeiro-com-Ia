@@ -144,13 +144,13 @@ a:hover {
     /* Espaçamento entre as criptomoedas */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 5.1);
     /* Adiciona uma sombra */
-    background: rgba(3, 3, 46, 0.093);
+    background: rgba(0, 0, 0, 0.166);
     /* Fundo com opacidade */
     backdrop-filter: blur(2px);
     /* Aplica um desfoque no fundo */
     border-radius: 10px;
     /* Bordas arredondadas */
-    border: 1px solid rgba(0, 0, 0, 0.096);
+    border: 1px solid rgba(0, 0, 0, 0.081);
     /* Borda leve */
     width: 340px;
     height: 320px;
