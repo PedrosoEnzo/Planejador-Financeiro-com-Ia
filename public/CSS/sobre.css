@@ -1,6 +1,6 @@
 * {
     overflow: hidden;
-    margin: 0%;
+    margin: 0;
 }
 
 .background-image {
@@ -34,33 +34,56 @@ a {
 }
 
 a:hover {
-    color: rgb(77, 57, 255);
+    color: rgb(64, 49, 203);
     text-decoration: none;
 }
- 
 
+.sobre {
+    color: aliceblue;
+    text-align: center;
+    padding: 70px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sobre h1 {
+   
+    font-size: 29px;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sobre p {
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.team-section {
+    padding: 20px 0;
+    text-align: center;
+}
 
 .team-members {
     display: flex;
     justify-content: center;
     gap: 30px;
-    padding: 20px 0;
+    padding: 18px;
 }
 
 .team-member {
     text-align: center;
     color: aliceblue;
- 
 }
 
 .team-member img {
-    width: 150px; /* Tamanho fixo */
-    height: 150px; /* Tamanho fixo para quadrado */
-    object-fit: cover; /* Corta a imagem para preencher o espaço */
-    border-radius: 50%; /* Adiciona borda arredondada */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
     border: 3px solid blue;
 }
 
-
-
-
+.team-member p {
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
