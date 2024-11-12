@@ -54,8 +54,9 @@ a:hover {
 }
 
 .sobre p {
-    font-size: 18px;
-    line-height: 1.9;
+    font-size: 16px;
+    line-height: 2.1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .team-section {
@@ -84,6 +85,6 @@ a:hover {
 }
 
 .team-member p {
-    margin-top: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
 }
