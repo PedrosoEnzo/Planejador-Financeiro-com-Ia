@@ -1,14 +1,15 @@
 {
   "name": "planejador-financeiro-com-ia",
   "version": "1.0.0",
+  "description": "Um planejador financeiro com integração de IA",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["finance", "IA", "planner"],
+  "author": "Geovani",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
