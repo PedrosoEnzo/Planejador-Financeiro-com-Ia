@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Suporte</title>
+    <title>Pergunta 4</title>
     <link rel="stylesheet" href="CSS/perguntas.css">
 </head>
 <body>
@@ -14,18 +14,20 @@
         <img src="../IMG/logo.png" alt="Logo">
     </div>
 
-    <section id="perfil">
-        <div class="form-group">
-            <label for="divida">Se sim, Quanto?</label>
+    <section id="renda">
+        <form id="contact" onsubmit="return false;"> <!-- Previne o envio do formulário -->
+            <label for="divida">Se sim, quanto?</label>
             <select id="divida" name="divida" required>
-              <option value="nao">Não tenho</option>
-              <option value="0a100">0 a 100</option>
-              <option value="100a500">100 a 500</option>              
-              <option value="500a1000">500 a 1000</option>
-              <option value="1000a5000">1000 a 5000</option>
-              <option value="mais5000">mais de 5000</option>
+                <option value="nao">Não tenho</option>
+                <option value="0a100">0 a 100</option>
+                <option value="100a500">100 a 500</option>
+                <option value="500a1000">500 a 1000</option>
+                <option value="1000a5000">1000 a 5000</option>
+                <option value="mais5000">Mais de 5000</option>
             </select>
-          </div>
+            <button type="button" onclick="window.location.href='pergunta3.html';">Voltar</button>
+            <button type="button" onclick="window.location.href='pergunta5.html';">Avançar</button>
+        </form>
     </section>
 
 </body>

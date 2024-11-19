@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Suporte</title>
+    <title>Pergunta 3</title>
     <link rel="stylesheet" href="CSS/perguntas.css">
 </head>
 <body>
@@ -14,14 +14,16 @@
         <img src="../IMG/logo.png" alt="Logo">
     </div>
 
-    <section id="objetivo">
-        <div class="form-group">
-            <label for="divida">Você tem algum tipo de divída pendente(parcelas, empréstimos, etc)?</label>
+    <section id="renda">
+        <form id="contact" onsubmit="return false;"> <!-- Previne o envio do formulário -->
+            <label for="divida">Você tem algum tipo de dívida pendente (parcelas, empréstimos, etc)?</label>
             <select id="divida" name="divida" required>
-              <option value="sim">Sim</option>
-              <option value="nao">Não</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
             </select>
-          </div>
+            <button type="button" onclick="window.location.href='pergunta2.html';">Voltar</button>
+            <button type="button" onclick="window.location.href='pergunta4.html';">Avançar</button>
+        </form>
     </section>
 
 </body>
