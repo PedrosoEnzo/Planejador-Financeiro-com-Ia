@@ -1,37 +1,102 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pergunta 4</title>
-    <link rel="stylesheet" href="CSS/perguntas.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('IMG/img2.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #333;
+            background-color: #fff;
+        }
+
+        select:focus {
+            border-color: #0058af;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            background-color: #003e7d;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #00224d;
+        }
+
+        button:active {
+            background-color: #001633;
+        }
+    </style>
 </head>
-
 <body>
-
-    <div class="background-image"></div>
-
-    <div class="logo">
-        <img src="../IMG/logo.png" alt="Logo">
+    <div class="container">
+        <h1>Você já investe? Se sim, quanto?</h1>
+        <form id="questionForm">
+            <div class="form-group">
+                <label for="investment">Selecione o valor investido</label>
+                <select id="investment">
+                    <option value="0">Não invisto</option>
+                    <option value="100">100</option>
+                    <option value="500">500</option>
+                    <option value="1000">1000</option>
+                    <option value="5000">5000</option>
+                    <option value="10000">Mais de 5000</option>
+                </select>
+            </div>
+            <button type="button" onclick="nextPage()">Próxima</button>
+        </form>
     </div>
 
-    <section id="renda">
-        <form id="contact" onsubmit="return false;"> <!-- Previne o envio do formulário -->
-            <label for="divida">Se sim, quanto?</label>
-            <select id="divida" name="divida" required>
-                <option value="nao">Não tenho</option>
-                <option value="0a100">0 a 100</option>
-                <option value="100a500">100 a 500</option>
-                <option value="500a1000">500 a 1000</option>
-                <option value="1000a5000">1000 a 5000</option>
-                <option value="mais5000">Mais de 5000</option>
-            </select>
-            <button type="button" onclick="window.location.href='pergunta3.html';">Voltar</button>
-            <button type="button" onclick="window.location.href='pergunta5.html';">Avançar</button>
-        </form>
-    </section>
-
+    <script>
+        function nextPage() {
+            const investment = document.getElementById('investment').value;
+            localStorage.setItem('investment', investment);
+            window.location.href = 'pergunta5.html'; // Ir para a próxima página
+        }
+    </script>
 </body>
-
 </html>

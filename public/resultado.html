@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado do Planejamento Financeiro</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('IMG/img1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);  
+            z-index: -1;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .result-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .chart-container {
+            flex: 1;
+            min-width: 400px;
+            background-color: rgba(0, 0, 0, 0.096);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.192);
+            padding: 20px;
+        }
+
+        .text-container {
+            flex: 1;
+            min-width: 400px;
+            background-color: rgba(0, 0, 0, 0.089);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.107);
+            padding: 20px;
+        }
+
+        h3 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #4b9cd3;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .investment-advice {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(245, 165, 35, 0);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .advice-text {
+            font-size: 18px;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .result-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .chart-container, .text-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Resultado do Planejamento Financeiro</h1>
+
+        <!-- Distribuição da Renda Mensal -->
+        <div class="result-container">
+            <div class="chart-container">
+                <h3>Distribuição da Renda Mensal</h3>
+                <canvas id="incomeChart"></canvas>
+            </div>
+            <div class="text-container">
+                <h3>Como está sua renda?</h3>
+                <p>Com base nas suas respostas, identificamos que sua renda mensal está no valor de <strong id="incomeValue">R$ 10000</strong>. Avaliar sua renda mensal é crucial para um planejamento financeiro eficiente.</p>
+            </div>
+        </div>
+
+        <!-- Distribuição das Despesas Mensais -->
+        <div class="result-container">
+            <div class="chart-container">
+                <h3>Distribuição das Despesas Mensais</h3>
+                <canvas id="expensesChart"></canvas>
+            </div>
+            <div class="text-container">
+                <h3>Suas Despesas Mensais</h3>
+                <p>Com relação às suas despesas mensais, você mencionou que gasta em média <strong id="expensesValue">R$ 8200</strong>. O gráfico abaixo mostra a distribuição de seus gastos por categoria, como alimentação, moradia, lazer, entre outros.</p>
+            </div>
+        </div>
+
+        <!-- Valor das Dívidas -->
+        <div class="result-container">
+            <div class="chart-container">
+                <h3>Valor das Dívidas</h3>
+                <canvas id="debtChart"></canvas>
+            </div>
+            <div class="text-container">
+                <h3>Você tem dívidas?</h3>
+                <p>Você mencionou que sua dívida é de <strong id="debtValue">R$ 100</strong>. Esse valor é importante para calcular o impacto das dívidas no seu planejamento financeiro.</p>
+            </div>
+        </div>
+
+        <!-- Investimentos Mensais -->
+        <div class="result-container">
+            <div class="chart-container">
+                <h3>Investimentos Mensais</h3>
+                <canvas id="investmentChart"></canvas>
+            </div>
+            <div class="text-container">
+                <h3>Você investe?</h3>
+                <p>Você informou que investe <strong id="investmentValue">R$ 100</strong> por mês. Avaliar quanto você investe é uma parte essencial do seu planejamento financeiro a longo prazo.</p>
+            </div>
+        </div>
+
+        <!-- Nível de Conhecimento sobre Investimentos -->
+        <div class="result-container">
+            <div class="text-container">
+                <h3>Qual seu nível de conhecimento sobre investimentos?</h3>
+                <p>Você se considera um(a) <strong id="investmentKnowledgeValue">básico</strong> em investimentos. Com isso, podemos sugerir estratégias de investimentos mais adequadas ao seu perfil.</p>
+            </div>
+        </div>
+
+        <!-- Conselhos de Investimento -->
+        <div class="investment-advice">
+            <h3>Conselhos de Investimento</h3>
+            <p class="advice-text" id="investment-suggestions"></p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2024 Planejador Financeiro</p>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            // Recuperando os dados armazenados
+            const income = localStorage.getItem('income') || 10000;
+            const expenses = JSON.parse(localStorage.getItem('expenses')) || { alimentacao: 1500, moradia: 3000, lazer: 1000, transporte: 500, saude: 800, outros: 200 };
+            const debt = parseFloat(localStorage.getItem('debt')) || 100;
+            const investment = localStorage.getItem('investment') || 1000;
+            const investmentKnowledge = localStorage.getItem('investmentKnowledge') || "nada";
+
+            // Exibindo as respostas no texto
+            document.getElementById('incomeValue').textContent = `R$ ${income}`;
+            document.getElementById('expensesValue').textContent = `R$ ${Object.values(expenses).reduce((a, b) => a + b, 0)}`;
+            document.getElementById('debtValue').textContent = `R$ ${debt}`;
+            document.getElementById('investmentValue').textContent = `R$ ${investment}`;
+            document.getElementById('investmentKnowledgeValue').textContent = investmentKnowledge;
+
+            // Gráficos e sugestões
+            const ctxIncome = document.getElementById('incomeChart').getContext('2d');
+            const ctxExpenses = document.getElementById('expensesChart').getContext('2d');
+            const ctxDebt = document.getElementById('debtChart').getContext('2d');
+            const ctxInvestment = document.getElementById('investmentChart').getContext('2d');
+
+            // Gráfico de Renda
+            new Chart(ctxIncome, {
+                type: 'pie',
+                data: {
+                    labels: ['Renda Mensal'],
+                    datasets: [{
+                        data: [income],
+                        backgroundColor: ['#2196F3'],
+                    }]
+                }
+            });
+
+            // Gráfico de Despesas
+            new Chart(ctxExpenses, {
+                type: 'pie',
+                data: {
+                    labels: Object.keys(expenses),
+                    datasets: [{
+                        data: Object.values(expenses),
+                        backgroundColor: ['#FF5722', '#FFC107', '#8BC34A', '#03A9F4', '#9C27B0', '#CDDC39'],
+                    }]
+                }
+            });
+
+            // Gráfico de Dívidas
+            new Chart(ctxDebt, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Dívida', 'Livre de Dívidas'],
+                    datasets: [{
+                        data: [debt, income - debt],
+                        backgroundColor: ['#F44336', '#4CAF50'],
+                    }]
+                }
+            });
+
+            // Gráfico de Investimentos
+            new Chart(ctxInvestment, {
+                type: 'line',
+                data: {
+                    labels: ['Investimentos Mensais'],
+                    datasets: [{
+                        data: [investment],
+                        backgroundColor: 'rgba(0, 123, 255, 0.4)',
+                        borderColor: '#007BFF',
+                        fill: true,
+                        pointRadius: 6,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: { display: false },
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return 'R$ ' + value.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Sugerindo investimentos
+            const adviceText = investmentKnowledge === 'básico' ? 
+                "É importante começar com investimentos mais seguros, como a poupança ou CDBs de baixo risco, até se familiarizar mais com o mercado." :
+                "Se você já tem mais experiência, considere diversificar seus investimentos em fundos de ações ou imóveis.";
+            document.getElementById('investment-suggestions').textContent = adviceText;
+        };
+    </script>
+
+</body>
+</html>

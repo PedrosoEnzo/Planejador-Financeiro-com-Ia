@@ -1,28 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Suporte</title>
-    <link rel="stylesheet" href="CSS/perguntas.css">
+    <title>Pergunta 5: Conhecimento sobre investimentos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('IMG/img2.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #333;
+            background-color: #fff;
+        }
+
+        select:focus {
+            border-color: #0058af;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            background-color: #003e7d;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #00224d;
+        }
+
+        button:active {
+            background-color: #001633;
+        }
+    </style>
 </head>
 <body>
-
-    <div class="background-image"></div>
-
-    <div class="logo">
-        <img src="../IMG/logo.png" alt="Logo">
+    <div class="container">
+        <h1>Qual é o seu nível de conhecimento sobre investimentos?</h1>
+        <form id="investmentForm">
+            <div class="form-group">
+                <label for="investmentKnowledge">Escolha seu nível de conhecimento:</label>
+                <select id="investmentKnowledge" name="investmentKnowledge" required>
+                    <option value="nenhum">Nenhum</option>
+                    <option value="básico">Básico</option>
+                    <option value="intermediário">Intermediário</option>
+                    <option value="avançado">Avançado</option>
+                </select>
+            </div>
+            <button type="submit">Próxima</button>
+        </form>
     </div>
 
-    <section id="objetivo">
-        <div class="form-group">
-            <label for="divida">Você ja investe?</label>
-            <select id="divida" name="divida" required>
-              <option value="sim">Sim</option>
-              <option value="nao">Não</option>
-            </select>
-          </div>
-    </section>
-
+    <script>
+        document.getElementById('investmentForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o envio do formulário
+            const investmentKnowledge = document.getElementById('investmentKnowledge').value;
+            localStorage.setItem('investmentKnowledge', investmentKnowledge); // Armazena o conhecimento sobre investimentos no localStorage
+            window.location.href = 'resultado.html'; // Redireciona para a próxima página
+        });
+    </script>
 </body>
 </html>
